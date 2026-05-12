@@ -110,7 +110,7 @@ const ALL_PLATFORMS={
 /* ── TRANSLATIONS ── */
 const T={
   tr:{
-    nav:{services:"Hizmetler",why:"Neden Biz",platforms:"Platformlar",process:"Süreç",testimonials:"Referanslar",cta:"Teklif Al"},
+    nav:{services:"Hizmetler",why:"Neden Biz",platforms:"Platformlar",process:"Süreç",testimonials:"Referanslar",vision:"Vizyon",cta:"Teklif Al"},
     hero:{pre:"DİJİTAL PAZARLAMA AJANSI",line1:"Dijitalde",line2:"Zirveye",line3:"Taşıyoruz.",sub:"Strateji, veri ve yaratıcılığı birleştirerek markanızı doğru kitleye, doğru zamanda ulaştırıyoruz.",btn1:"Ücretsiz Analiz Al →",btn2:"Hizmetleri Keşfet",s1:"Proje",s2:"Memnuniyet",s3:"Deneyim"},
     svcTag:"Hizmetlerimiz",svcTitle:"Her Kanalda\nGüçlü Varlık.",svcSub:"360 derece dijital pazarlama hizmetleriyle markanızın tüm temas noktalarını yönetiyoruz.",
     whyTag:"Neden Biz",whyTitle:"Sıradan Bir\nAjans Değiliz.",whySub:"İçgüdüye değil, veriye güveniyoruz. Her karar, her kampanya kanıtlanmış bir stratejiye dayanıyor.",whyBtn:"Stratejinizi Konuşalım →",
@@ -136,7 +136,7 @@ const T={
     footer:{desc:"Veriye dayalı dijital pazarlama stratejileriyle markanızı büyütüyor, rakiplerinizin önüne geçiriyoruz.",h1:"Hizmetler",h2:"Şirket",h3:"İletişim",links1:["SEO","Google Ads","Sosyal Medya","İçerik","Web Tasarım"],links2:["Hakkımızda","Ekibimiz","Blog","Kariyer"],copy:"© 2025 PAZAR ZEKASI — TÜM HAKLARI SAKLIDIR",legal:"GİZLİLİK · KOŞULLAR"},
   },
   en:{
-    nav:{services:"Services",why:"Why Us",platforms:"Platforms",process:"Process",testimonials:"References",cta:"Get Quote"},
+    nav:{services:"Services",why:"Why Us",platforms:"Platforms",process:"Process",testimonials:"References",vision:"Vision",cta:"Get Quote"},
     hero:{pre:"DIGITAL MARKETING AGENCY",line1:"Dominating",line2:"Digital",line3:"Markets.",sub:"We combine strategy, data and creativity to reach your audience at the right time with the right message.",btn1:"Get Free Analysis →",btn2:"Explore Services",s1:"Projects",s2:"Satisfaction",s3:"Experience"},
     svcTag:"Our Services",svcTitle:"Strong Presence\nOn Every Channel.",svcSub:"We manage all digital touchpoints of your brand with 360-degree digital marketing services.",
     whyTag:"Why Us",whyTitle:"We're Not\nJust an Agency.",whySub:"We trust data, not intuition. Every decision, every campaign is built on proven strategy.",whyBtn:"Let's Talk Strategy →",
@@ -466,6 +466,7 @@ function Navbar({lang,setLang,onQuote}){
   const close=()=>setMenuOpen(false);
   const NAV=[
     {id:"hizmetler",label:tx.nav.services},
+    {id:"vizyon",label:tx.nav.vision},
     {id:"neden-biz",label:tx.nav.why},
     {id:"platformlar",label:tx.nav.platforms},
     {id:"surec",label:tx.nav.process},
@@ -474,7 +475,7 @@ function Navbar({lang,setLang,onQuote}){
   return(<>
     <nav className={`navbar${scrolled?" sc":""}`}>
       <a href="#" className="logo-wrap">
-        <BrainLogo size={34}/>
+        <BrainLogo size={46}/>
         <div className="logo-text">
           <span className="logo-main">Pazar<em>Z</em>ekası</span>
           <span className="logo-sub">{lang==="tr"?"Dijital Pazarlama Uzmanı":"Digital Marketing Expert"}</span>
@@ -787,6 +788,70 @@ function FaqSection({lang}){
   );
 }
 
+/* ── Vision Section ── */
+function VisionSection({lang}){
+  const isTR=lang==="tr";
+  const{ref,visible}=useFadeIn(0,.08);
+  const pills=isTR
+    ?["Yenilikçi Stratejiler","Sürdürülebilir Büyüme","Veri Odaklı","360° Pazarlama"]
+    :["Innovative Strategies","Sustainable Growth","Data Driven","360° Marketing"];
+  return(
+    <section className="section vision-section" id="vizyon">
+      <div className="vision-bg"/>
+      <div className="wrap">
+        <div className="vision-grid">
+          <div className={`vision-img-col${visible?" v":""}`}>
+            <div className="vision-img-frame">
+              <img src="/pazar_zekasi2.jpeg" className="vision-img" alt="Pazar Zekası Vizyon"/>
+              <div className="vision-img-glow"/>
+            </div>
+          </div>
+          <div ref={ref} className={`vision-content${visible?" v":""}`}>
+            <div className="sec-tag">{isTR?"Vizyonumuz":"Our Vision"}</div>
+            <h2 className="vision-title">
+              {isTR?<>Dijitalde<br/>Geleceği<br/>Şekillendiriyoruz.</>:<>Shaping<br/>The Digital<br/>Future.</>}
+            </h2>
+            <div className="vision-line"/>
+            <p className="vision-p">
+              {isTR
+                ?"Pazar Zekası Dijital Pazarlama olarak vizyonumuz; markaların dijital dünyada sadece görünür olmasını değil, sürdürülebilir şekilde büyümesini sağlayan yenilikçi ve sonuç odaklı stratejiler üretmektir."
+                :"Our vision at Pazar Zekası Digital Marketing is to produce innovative, results-driven strategies that help brands not just become visible, but grow sustainably in the digital world."
+              }
+            </p>
+            <p className="vision-p">
+              {isTR
+                ?"Modern pazarlama anlayışı, yaratıcı içerikler ve veri odaklı reklam yönetimiyle işletmeleri hedef kitlesiyle en doğru şekilde buluşturmayı amaçlıyoruz."
+                :"With a modern marketing approach, creative content and data-driven ad management, we aim to connect businesses with their target audience in the most effective way possible."
+              }
+            </p>
+            <div className="vision-highlight">
+              {isTR
+                ?"Türkiye'nin güven veren, fark yaratan ve dijital dönüşüme yön veren dijital pazarlama ajanslarından biri olmak en büyük hedefimizdir."
+                :"Being one of Turkey's most trusted, differentiating and digitally transformative marketing agencies is our greatest goal."
+              }
+            </div>
+            <div className="vision-pills">
+              {pills.map((p,i)=><span key={i} className="vision-pill">{p}</span>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── WhatsApp Float Button ── */
+const WA_LINK="https://wa.me/905449742767";
+function WhatsAppBtn(){
+  return(
+    <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="wa-btn" aria-label="WhatsApp ile İletişim">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+  );
+}
+
 /* ── Manifesto Section ── */
 function ManifestoSection({lang}){
   const tx=T[lang];
@@ -795,30 +860,39 @@ function ManifestoSection({lang}){
   return(
     <section className="section manifesto-section" id="manifesto">
       <div className="manifesto-bg"/>
+      <div className="manifesto-mob-bg" aria-hidden="true"/>
       <div className="wrap">
-        <div ref={ref} className={`manifesto-inner${visible?" v":""}`}>
-          <div className="manifesto-tag">{tx.manifestoTag}</div>
-          <h2 className="manifesto-title">{tx.manifestoTitle}</h2>
-          <div className="manifesto-line"/>
-          <div className="manifesto-body">
-            {paragraphs.map((para,i)=>{
-              if(i===0){
-                const[first,...rest]=para.split("\n");
-                return(
-                  <div key={i} className="manifesto-p">
-                    <p className="manifesto-lead">{first}</p>
-                    {rest.map((l,j)=><p key={j} className="manifesto-accent">{l}</p>)}
-                  </div>
-                );
-              }
-              if(para.startsWith("Amacımız")||para.startsWith("Our goal")){
-                return <p key={i} className="manifesto-highlight">{para}</p>;
-              }
-              if(para.startsWith("Çünkü")||para.startsWith("Because")){
-                return <p key={i} className="manifesto-closing">{para}</p>;
-              }
-              return <p key={i} className="manifesto-p">{para}</p>;
-            })}
+        <div className="manifesto-grid">
+          <div ref={ref} className={`manifesto-inner${visible?" v":""}`}>
+            <div className="manifesto-tag">{tx.manifestoTag}</div>
+            <h2 className="manifesto-title">{tx.manifestoTitle}</h2>
+            <div className="manifesto-line"/>
+            <div className="manifesto-body">
+              {paragraphs.map((para,i)=>{
+                if(i===0){
+                  const[first,...rest]=para.split("\n");
+                  return(
+                    <div key={i} className="manifesto-p">
+                      <p className="manifesto-lead">{first}</p>
+                      {rest.map((l,j)=><p key={j} className="manifesto-accent">{l}</p>)}
+                    </div>
+                  );
+                }
+                if(para.startsWith("Amacımız")||para.startsWith("Our goal")){
+                  return <p key={i} className="manifesto-highlight">{para}</p>;
+                }
+                if(para.startsWith("Çünkü")||para.startsWith("Because")){
+                  return <p key={i} className="manifesto-closing">{para}</p>;
+                }
+                return <p key={i} className="manifesto-p">{para}</p>;
+              })}
+            </div>
+          </div>
+          <div className={`manifesto-visual${visible?" v":""}`}>
+            <div className="manifesto-img-wrap">
+              <img src="/pazar_zekasi3.png" className="manifesto-img" alt="Dijital Pazarlama"/>
+              <div className="manifesto-img-shine"/>
+            </div>
           </div>
         </div>
       </div>
@@ -841,6 +915,7 @@ export default function PazarZekasi(){
   const openQuote=()=>setQuoteOpen(true);
   return(<>
     <Style/><ScrollProgress/><CustomCursor/><ThreeBackground/><DotCanvas/>
+    <WhatsAppBtn/>
     <QuoteModal open={quoteOpen} onClose={()=>setQuoteOpen(false)} lang={lang}/>
     <Navbar lang={lang} setLang={setLang} onQuote={openQuote}/>
     <Hero lang={lang} onQuote={openQuote}/>
@@ -856,6 +931,9 @@ export default function PazarZekasi(){
 
     {/* MANIFESTO */}
     <ManifestoSection lang={lang}/>
+
+    {/* VISION */}
+    <VisionSection lang={lang}/>
 
     {/* WHY */}
     <WhySection lang={lang} items={WHY_ITEMS}/>
@@ -888,7 +966,7 @@ export default function PazarZekasi(){
         <div className="sec-tag">{tx.ctaTag}</div>
         <h2 className="cta-title">{tx.ctaTitle.split("\n").map((l,i)=><span key={i}>{l}{i===0&&<br/>}</span>)}</h2>
         <p className="cta-sub">{tx.ctaSub.split("\n").map((l,i)=><span key={i}>{l}{i===0&&<br/>}</span>)}</p>
-        <div className="cta-btns"><button className="btn-p" onClick={openQuote}>{tx.ctaBtn1}</button><MagBtn href="tel:+994501234567" className="btn-o">{tx.ctaBtn2}</MagBtn></div>
+        <div className="cta-btns"><button className="btn-p" onClick={openQuote}>{tx.ctaBtn1}</button><MagBtn href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-o">{tx.ctaBtn2}</MagBtn></div>
       </div>
     </div></section>
 
@@ -917,7 +995,7 @@ function Style(){
 }
 
 const CSS=`
-:root{--bg:#03050e;--bg2:#060b18;--bg3:#0a1020;--blue:#1d4ed8;--blue2:#2563eb;--blue3:#3b82f6;--glow:#60a5fa;--cyan:#06b6d4;--text:#e8f0ff;--text2:#7c93b8;--text3:#2e4060;--b1:rgba(37,99,235,.1);--b2:rgba(37,99,235,.2);--b3:rgba(37,99,235,.4);--card:rgba(6,11,24,.75);--r:12px;--rl:20px}
+:root{--bg:#03050e;--bg2:#060b18;--bg3:#0a1020;--blue:#1d4ed8;--blue2:#2563eb;--blue3:#3b82f6;--glow:#60a5fa;--cyan:#06b6d4;--purple:#8b5cf6;--pink:#c084fc;--text:#e8f0ff;--text2:#7c93b8;--text3:#2e4060;--b1:rgba(37,99,235,.1);--b2:rgba(37,99,235,.2);--b3:rgba(37,99,235,.4);--card:rgba(6,11,24,.75);--r:12px;--rl:20px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none}html{overflow-x:hidden}
@@ -931,6 +1009,11 @@ body::after{content:'';position:fixed;inset:0;z-index:1;background:repeating-lin
 @keyframes spinBorder{to{--angle:360deg}}
 @keyframes scrollAnim{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 @keyframes gridMove{0%{background-position:0 0}100%{background-position:48px 48px}}
+@keyframes brainFloat{0%,100%{transform:translateY(0) scale(1) rotate(-.5deg)}50%{transform:translateY(-18px) scale(1.03) rotate(.5deg)}}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,.35)}60%{box-shadow:0 4px 24px rgba(37,211,102,.5),0 0 0 14px rgba(37,211,102,0)}}
+.wa-btn{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:9990;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s;animation:waPulse 2.6s ease-in-out infinite;text-decoration:none}
+.wa-btn:hover{transform:scale(1.14);box-shadow:0 6px 36px rgba(37,211,102,.75)}
+@keyframes warmGlow{0%,100%{opacity:.22;filter:drop-shadow(0 0 28px rgba(139,92,246,.55)) drop-shadow(0 0 60px rgba(96,165,250,.3)) drop-shadow(0 0 100px rgba(6,182,212,.15))}50%{opacity:.32;filter:drop-shadow(0 0 52px rgba(139,92,246,.95)) drop-shadow(0 0 100px rgba(96,165,250,.6)) drop-shadow(0 0 160px rgba(192,132,252,.4))}}
 .cur-dot{position:fixed;width:7px;height:7px;background:var(--glow);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen}
 .cur-ring{position:fixed;width:30px;height:30px;border:1px solid rgba(96,165,250,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .18s,height .18s,border-color .18s}
 .wrap{max-width:1140px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
@@ -984,7 +1067,7 @@ section{position:relative;z-index:2}
 .hero-pre{display:inline-flex;align-items:center;gap:7px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2.5px;color:var(--cyan);margin-bottom:22px;animation:fadeUp .6s ease both;min-height:20px}
 .blink-dot{width:4px;height:4px;background:var(--cyan);border-radius:50%;animation:blink .8s step-end infinite;flex-shrink:0}
 .hero-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(52px,5.5vw,96px);font-weight:700;line-height:.96;letter-spacing:-1px;margin-bottom:28px}
-.line-grad{background:linear-gradient(125deg,#fff 0%,var(--glow) 40%,var(--cyan) 70%,#a78bfa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 5s ease infinite}
+.line-grad{background:linear-gradient(125deg,#fff 0%,var(--purple) 25%,var(--glow) 55%,var(--cyan) 80%,#c084fc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 5s ease infinite}
 .line-em,.line-plain{color:var(--text);font-style:normal}
 .type-cur{display:inline-block;width:3px;background:var(--glow);margin-left:2px;animation:blink .5s step-end infinite;vertical-align:baseline}
 .hero-p{max-width:460px;font-size:16px;line-height:1.8;color:var(--text2);margin-bottom:36px;animation:fadeUp .7s .15s ease both;font-weight:300}
@@ -1030,8 +1113,8 @@ section{position:relative;z-index:2}
 .svc-card{background:var(--card);border:1px solid var(--b1);border-radius:var(--rl);padding:32px 28px;position:relative;overflow:hidden;opacity:0;transform:translateY(30px);transition:opacity .6s cubic-bezier(0.16,1,0.3,1),transform .7s cubic-bezier(0.34,1.56,0.64,1),border-color .3s;backdrop-filter:blur(20px);will-change:transform}
 .svc-card.v{opacity:1;transform:translateY(0)}
 @property --angle{syntax:'<angle>';initial-value:0deg;inherits:false}
-.svc-glow-border{position:absolute;inset:0;border-radius:var(--rl);background:conic-gradient(from var(--angle,0deg),transparent 60%,rgba(37,99,235,.4) 70%,rgba(6,182,212,.4) 80%,transparent 90%);animation:spinBorder 5s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:destination-out;padding:1px;pointer-events:none;opacity:0;transition:opacity .35s}
-.svc-card:hover{border-color:var(--b2)}.svc-card:hover .svc-glow-border{opacity:1}
+.svc-glow-border{position:absolute;inset:0;border-radius:var(--rl);background:conic-gradient(from var(--angle,0deg),transparent 55%,rgba(139,92,246,.5) 65%,rgba(37,99,235,.4) 75%,rgba(6,182,212,.4) 85%,transparent 92%);animation:spinBorder 5s linear infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:destination-out;padding:1px;pointer-events:none;opacity:0;transition:opacity .35s}
+.svc-card:hover{border-color:rgba(139,92,246,.35)}.svc-card:hover .svc-glow-border{opacity:1}
 .svc-light{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .25s;border-radius:var(--rl)}
 .svc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .svc-icon{width:46px;height:46px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;transition:all .35s}
@@ -1040,7 +1123,7 @@ section{position:relative;z-index:2}
 .svc-title{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:600;margin-bottom:10px;letter-spacing:.3px}
 .svc-desc{font-size:13.5px;color:var(--text2);line-height:1.75;font-weight:300}
 .svc-link{display:inline-flex;align-items:center;gap:5px;color:var(--glow);font-family:'Space Mono',monospace;font-size:11px;text-decoration:none;margin-top:18px;letter-spacing:.5px;transition:gap .25s}.svc-link:hover{gap:10px}
-.why-section{padding:120px 0;background:linear-gradient(180deg,transparent,rgba(37,99,235,.025),transparent)}
+.why-section{padding:120px 0;background:linear-gradient(180deg,transparent,rgba(139,92,246,.03) 35%,rgba(37,99,235,.025) 65%,transparent)}
 .why-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .why-left{opacity:0;transform:translateX(-30px);transition:opacity .9s cubic-bezier(0.16,1,0.3,1),transform .9s cubic-bezier(0.16,1,0.3,1)}
 .why-left.v{opacity:1;transform:translateX(0)}
@@ -1060,7 +1143,7 @@ section{position:relative;z-index:2}
 .plat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .plat-card{background:var(--card);border:1px solid var(--b1);border-radius:var(--rl);padding:28px 24px;position:relative;overflow:hidden;opacity:0;transform:translateY(28px) scale(.97);transition:opacity .6s cubic-bezier(0.16,1,0.3,1),transform .7s cubic-bezier(0.34,1.56,0.64,1),border-color .3s,box-shadow .3s;backdrop-filter:blur(20px);will-change:transform;cursor:default}
 .plat-card.v{opacity:1;transform:translateY(0) scale(1)}
-.plat-card:hover{border-color:var(--b2);box-shadow:0 20px 56px rgba(37,99,235,.12)}
+.plat-card:hover{border-color:rgba(139,92,246,.3);box-shadow:0 20px 56px rgba(139,92,246,.1),0 8px 24px rgba(37,99,235,.08)}
 .plat-icon{width:62px;height:62px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:transform .4s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s;flex-shrink:0}
 .plat-card:hover .plat-icon{transform:translateY(-5px) scale(1.07);box-shadow:0 14px 32px rgba(0,0,0,.45)}
 .plat-text{flex:1;min-width:0}
@@ -1301,7 +1384,7 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 /* ── LOGO ── */
 .logo-wrap{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .logo-text{display:flex;flex-direction:column;gap:0}
-.logo-main{font-family:'Space Mono',monospace;font-size:15px;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1}
+.logo-main{font-family:'Space Mono',monospace;font-size:18px;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1}
 .logo-main em{font-style:normal;color:#00d4ff}
 .logo-sub{font-family:'Space Grotesk',sans-serif;font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;line-height:1;margin-top:3px}
 .mob-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Space Mono',monospace;font-size:14px;font-weight:700;color:var(--text);letter-spacing:1px;margin-bottom:28px}
@@ -1332,31 +1415,73 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 
 /* ── MANIFESTO ── */
 .manifesto-section{padding:120px 0;position:relative;overflow:hidden}
-.manifesto-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(37,99,235,.04) 0%,transparent 40%,rgba(6,182,212,.025) 100%);pointer-events:none}
-.manifesto-inner{max-width:780px;margin:0 auto;text-align:center;opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1)}
-.manifesto-inner.v{opacity:1;transform:translateY(0)}
-.manifesto-tag{font-family:'Space Mono',monospace;font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;display:block}
-.manifesto-title{font-family:'Rajdhani',sans-serif;font-size:clamp(40px,6vw,72px);font-weight:700;letter-spacing:6px;background:linear-gradient(125deg,#fff 0%,var(--glow) 50%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 6s ease infinite;margin-bottom:24px}
-.manifesto-line{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);margin:0 auto 48px}
-.manifesto-body{display:flex;flex-direction:column;gap:22px;text-align:left}
-.manifesto-lead{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:2px;color:var(--cyan);text-transform:uppercase;line-height:1.7}
-.manifesto-accent{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:500;color:var(--text);line-height:1.65;letter-spacing:.2px}
-.manifesto-p{font-size:15px;color:var(--text2);line-height:1.9;font-weight:300}
-.manifesto-highlight{font-family:'Rajdhani',sans-serif;font-size:21px;font-weight:700;color:var(--text);border-left:3px solid var(--glow);padding-left:22px;line-height:1.6;margin:8px 0}
-.manifesto-closing{font-family:'Space Mono',monospace;font-size:13px;color:var(--glow);letter-spacing:1px;line-height:1.8;text-align:center;margin-top:8px;padding:20px;border:1px solid var(--b2);border-radius:var(--r);background:rgba(37,99,235,.04)}
+.manifesto-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(139,92,246,.06) 0%,transparent 35%,rgba(37,99,235,.04) 60%,rgba(6,182,212,.03) 100%);pointer-events:none}
+.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch;grid-template-rows:1fr}
+.manifesto-inner{opacity:0;transform:translateX(-28px);transition:opacity .9s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1);position:relative;z-index:2}
+.manifesto-inner.v{opacity:1;transform:translateX(0)}
+.manifesto-tag{font-family:'Space Mono',monospace;font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--pink);margin-bottom:16px;display:block}
+.manifesto-title{font-family:'Rajdhani',sans-serif;font-size:clamp(36px,4.5vw,66px);font-weight:700;letter-spacing:4px;background:linear-gradient(125deg,#fff 0%,var(--purple) 30%,var(--glow) 65%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 6s ease infinite;margin-bottom:20px;line-height:1.05}
+.manifesto-line{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--purple),var(--cyan));margin:0 0 40px}
+.manifesto-body{display:flex;flex-direction:column;gap:20px}
+.manifesto-lead{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--pink);text-transform:uppercase;line-height:1.7}
+.manifesto-accent{font-family:'Rajdhani',sans-serif;font-size:19px;font-weight:500;color:var(--text);line-height:1.6;letter-spacing:.2px}
+.manifesto-p{font-size:14.5px;color:var(--text2);line-height:1.9;font-weight:300}
+.manifesto-highlight{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;color:var(--text);border-left:3px solid var(--purple);padding-left:20px;line-height:1.55;margin:6px 0}
+.manifesto-closing{font-family:'Space Mono',monospace;font-size:12px;color:var(--pink);letter-spacing:1px;line-height:1.8;margin-top:6px;padding:20px;border:1px solid rgba(139,92,246,.28);border-radius:var(--r);background:linear-gradient(135deg,rgba(139,92,246,.06),rgba(37,99,235,.05))}
+.manifesto-visual{opacity:0;transform:translateX(28px);transition:opacity .9s .2s cubic-bezier(0.16,1,0.3,1),transform 1s .2s cubic-bezier(0.34,1.56,0.64,1);position:relative;z-index:2}
+.manifesto-visual.v{opacity:1;transform:translateX(0)}
+.manifesto-mob-bg{display:none}
+.manifesto-img-wrap{position:absolute;inset:0;border-radius:28px;overflow:hidden;box-shadow:0 0 0 1px rgba(139,92,246,.3),0 32px 80px rgba(0,0,0,.55),0 0 80px rgba(139,92,246,.12)}
+.manifesto-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.manifesto-img-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(139,92,246,.1) 0%,transparent 50%,rgba(6,182,212,.08) 100%);pointer-events:none}
 
 @media(max-width:768px){
   .faq-section,.manifesto-section{padding:72px 0}
   .faq-qtext{font-size:15px}.faq-a p{padding:0 16px 16px 16px}
+  .logo-sub{display:none}.logo-main{font-size:15px}
+  .manifesto-mob-bg{display:block;position:absolute;inset:-12px;background-image:url('/pazar_zekasi3.png');background-size:cover;background-position:center top;filter:blur(10px);opacity:.55;pointer-events:none;z-index:0}
+  .manifesto-section::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(3,5,14,.82) 0%,rgba(3,5,14,.38) 40%,rgba(3,5,14,.38) 60%,rgba(3,5,14,.82) 100%);z-index:1;pointer-events:none}
+  .manifesto-bg{display:none}
+  .manifesto-grid{grid-template-columns:1fr;gap:0;align-items:start}
+  .manifesto-inner{z-index:3;transform:translateY(28px)}
+  .manifesto-inner.v{transform:translateY(0)}
+  .manifesto-visual{display:none}
   .manifesto-title{font-size:clamp(30px,8vw,48px);letter-spacing:3px}
+  .manifesto-line{margin:0 0 32px}
   .manifesto-highlight{font-size:18px}.manifesto-accent{font-size:17px}
-  .logo-sub{display:none}.logo-main{font-size:13px}
+  .vision-grid{grid-template-columns:1fr}
+  .vision-img-col{order:1;margin-top:40px}
+  .vision-content{order:0}
+  .vision-title{font-size:clamp(28px,7vw,44px)}
+  .vision-pills{flex-wrap:wrap}
 }
 @media(max-width:480px){
   .faq-section,.manifesto-section{padding:56px 0}
   .faq-q{padding:14px 16px;gap:10px}.faq-num{font-size:9px}.faq-qtext{font-size:14px}
   .faq-a p{font-size:13px;padding:0 14px 14px 14px}
-  .manifesto-p{font-size:14px}.manifesto-closing{font-size:11.5px}
+  .manifesto-p{font-size:13.5px}.manifesto-closing{font-size:11px}
+  .vision-section{padding:64px 0}
+  .vision-p{font-size:14px}.vision-highlight{font-size:15px}
 }
+
+/* ── VISION ── */
+.vision-section{padding:120px 0;position:relative;overflow:hidden}
+.vision-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,182,212,.03) 0%,transparent 40%,rgba(139,92,246,.04) 70%,transparent 100%);pointer-events:none}
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.vision-img-col{opacity:0;transform:translateX(-28px);transition:opacity .9s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.34,1.56,0.64,1)}
+.vision-img-col.v{opacity:1;transform:translateX(0)}
+.vision-img-frame{position:relative;border-radius:28px;overflow:visible}
+.vision-img{width:100%;display:block;border-radius:24px;box-shadow:0 40px 100px rgba(0,0,0,.55);animation:brainFloat 10s ease-in-out infinite}
+.vision-img-glow{position:absolute;inset:-30px;border-radius:50px;background:radial-gradient(ellipse at center,rgba(139,92,246,.18) 0%,rgba(96,165,250,.08) 45%,transparent 70%);pointer-events:none;animation:warmGlow 6s ease-in-out infinite;filter:blur(20px)}
+.vision-content{opacity:0;transform:translateX(28px);transition:opacity .9s .2s cubic-bezier(0.16,1,0.3,1),transform 1s .2s cubic-bezier(0.16,1,0.3,1)}
+.vision-content.v{opacity:1;transform:translateX(0)}
+.vision-title{font-family:'Rajdhani',sans-serif;font-size:clamp(36px,4.2vw,60px);font-weight:700;letter-spacing:2px;background:linear-gradient(125deg,#fff 0%,var(--cyan) 40%,var(--purple) 80%,var(--pink) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 7s ease infinite;margin-bottom:20px;line-height:1.05}
+.vision-line{width:80px;height:1px;background:linear-gradient(90deg,var(--cyan),var(--purple),transparent);margin:0 0 32px}
+.vision-p{font-size:15px;color:var(--text2);line-height:1.9;font-weight:300;margin-bottom:18px}
+.vision-highlight{font-family:'Rajdhani',sans-serif;font-size:17px;font-weight:600;color:var(--text);border-left:3px solid var(--cyan);padding:12px 18px;background:rgba(6,182,212,.05);border-radius:0 var(--r) var(--r) 0;line-height:1.6;margin-bottom:28px}
+.vision-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.vision-pill{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(6,182,212,.25);border-radius:20px;padding:6px 14px;background:rgba(6,182,212,.05);transition:all .3s}
+.vision-pill:hover{background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.5);transform:translateY(-2px)}
 `;
+
 
