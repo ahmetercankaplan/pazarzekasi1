@@ -475,7 +475,7 @@ function Navbar({lang,setLang,onQuote}){
   return(<>
     <nav className={`navbar${scrolled?" sc":""}`}>
       <a href="#" className="logo-wrap">
-        <BrainLogo size={46}/>
+        <BrainLogo size={56}/>
         <div className="logo-text">
           <span className="logo-main">Pazar<em>Z</em>ekası</span>
           <span className="logo-sub">{lang==="tr"?"Dijital Pazarlama Uzmanı":"Digital Marketing Expert"}</span>
@@ -1384,7 +1384,7 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 /* ── LOGO ── */
 .logo-wrap{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .logo-text{display:flex;flex-direction:column;gap:0}
-.logo-main{font-family:'Space Mono',monospace;font-size:18px;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1}
+.logo-main{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1}
 .logo-main em{font-style:normal;color:#00d4ff}
 .logo-sub{font-family:'Space Grotesk',sans-serif;font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;line-height:1;margin-top:3px}
 .mob-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Space Mono',monospace;font-size:14px;font-weight:700;color:var(--text);letter-spacing:1px;margin-bottom:28px}
@@ -1438,7 +1438,7 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 @media(max-width:768px){
   .faq-section,.manifesto-section{padding:72px 0}
   .faq-qtext{font-size:15px}.faq-a p{padding:0 16px 16px 16px}
-  .logo-sub{display:none}.logo-main{font-size:15px}
+  .logo-sub{display:none}.logo-main{font-size:17px}
   .manifesto-mob-bg{display:block;position:absolute;inset:-12px;background-image:url('/pazar_zekasi3.png');background-size:cover;background-position:center top;filter:blur(10px);opacity:.55;pointer-events:none;z-index:0}
   .manifesto-section::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(3,5,14,.82) 0%,rgba(3,5,14,.38) 40%,rgba(3,5,14,.38) 60%,rgba(3,5,14,.82) 100%);z-index:1;pointer-events:none}
   .manifesto-bg{display:none}
