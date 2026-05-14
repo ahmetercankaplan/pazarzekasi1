@@ -61,25 +61,31 @@ const ALL_TESTIMONIALS={
     {initials:"AY",name:"Ayşe Yıldız",role:"CEO · NovaTech Dijital",text:"Pazar Zekası ile çalışmaya başladığımızdan bu yana organik trafiğimiz 8 katına çıktı. Gerçek bir iş ortağı bulduk."},
     {initials:"MK",name:"Mehmet Kaya",role:"Pazarlama Müdürü · BrandPro",text:"Google Ads yönetimimizi devraldıklarında dönüşüm maliyetimiz %60 düştü. Veri odaklı yaklaşımları fark yaratıyor."},
     {initials:"ZD",name:"Zeynep Demir",role:"Kurucu · StyleBoutique",text:"Sosyal medya stratejimizi kökten değiştirdiler. 6 ayda takipçi sayımız 3 kat arttı, satışlarımız rekor kırdı."},
+    {initials:"SE",name:"Selin Erdoğan",role:"Kurucu · TatlıDükkanı",text:"Reklam çekimi hizmetlerini aldığımızda içeriklerimizin kalitesi inanılmaz arttı. Müşterilerimizden çok olumlu geri dönüşler alıyoruz."},
+    {initials:"BT",name:"Burak Tunç",role:"CEO · TechStart TR",text:"SEO çalışmalarıyla 3 ayda Google'ın ilk sayfasına çıktık. Bu ekibin analitik yaklaşımı gerçekten etkileyici."},
+    {initials:"HC",name:"Hande Can",role:"Pazarlama Direktörü · FashionHub",text:"Meta reklam kampanyalarıyla ROAS'ımızı 4 katına çıkardılar. Her kuruşun karşılığını fazlasıyla aldık."},
   ],
   en:[
     {initials:"AY",name:"Ayşe Yıldız",role:"CEO · NovaTech Digital",text:"Since we started working with Pazar Zekası, our organic traffic has grown 8x. We found a true business partner."},
     {initials:"MK",name:"Mehmet Kaya",role:"Marketing Manager · BrandPro",text:"When they took over our Google Ads management, our conversion cost dropped 60%. Their data-driven approach truly makes a difference."},
     {initials:"ZD",name:"Zeynep Demir",role:"Founder · StyleBoutique",text:"They completely transformed our social media strategy. Our followers tripled in 6 months and our sales hit record highs."},
+    {initials:"SE",name:"Selin Erdoğan",role:"Founder · TatlıDükkanı",text:"When we got their ad shooting services, the quality of our content increased incredibly. We receive very positive feedback from our customers."},
+    {initials:"BT",name:"Burak Tunç",role:"CEO · TechStart TR",text:"With their SEO work, we reached Google's first page in 3 months. This team's analytical approach is truly impressive."},
+    {initials:"HC",name:"Hande Can",role:"Marketing Director · FashionHub",text:"They quadrupled our ROAS with Meta ad campaigns. We got more than our money's worth."},
   ],
 };
 const ALL_STATS={
   tr:[
-    {count:350,suffix:"+",label:"başarılı proje"},
-    {count:12,suffix:"+",label:"yıllık deneyim"},
+    {count:120,suffix:"+",label:"mutlu müşteri"},
+    {count:6,suffix:"+",label:"yıllık deneyim"},
     {count:98,suffix:"%",label:"müşteri memnuniyeti"},
-    {count:47,suffix:"+",label:"marka zirveye taşındı"},
+    {count:30,suffix:"+",label:"marka zirveye taşındı"},
   ],
   en:[
-    {count:350,suffix:"+",label:"successful projects"},
-    {count:12,suffix:"+",label:"years experience"},
+    {count:120,suffix:"+",label:"happy clients"},
+    {count:6,suffix:"+",label:"years experience"},
     {count:98,suffix:"%",label:"client satisfaction"},
-    {count:47,suffix:"+",label:"brands elevated"},
+    {count:30,suffix:"+",label:"brands elevated"},
   ],
 };
 const ALL_PLATFORMS={
@@ -110,7 +116,7 @@ const ALL_PLATFORMS={
 /* ── TRANSLATIONS ── */
 const T={
   tr:{
-    nav:{services:"Hizmetler",why:"Neden Biz",platforms:"Platformlar",process:"Süreç",testimonials:"Referanslar",vision:"Vizyon",cta:"Teklif Al"},
+    nav:{services:"Hizmetler",why:"Neden Biz",platforms:"Platformlar",process:"Süreç",testimonials:"Referanslar",vision:"Vizyon",shooting:"Reklam Çekimleri",manifesto:"Manifesto",cta:"Teklif Al"},
     hero:{pre:"DİJİTAL PAZARLAMA AJANSI",line1:"Dijitalde",line2:"Zirveye",line3:"Taşıyoruz.",sub:"Strateji, veri ve yaratıcılığı birleştirerek markanızı doğru kitleye, doğru zamanda ulaştırıyoruz.",btn1:"Ücretsiz Analiz Al →",btn2:"Hizmetleri Keşfet",s1:"Proje",s2:"Memnuniyet",s3:"Deneyim"},
     svcTag:"Hizmetlerimiz",svcTitle:"Her Kanalda\nGüçlü Varlık.",svcSub:"360 derece dijital pazarlama hizmetleriyle markanızın tüm temas noktalarını yönetiyoruz.",
     whyTag:"Neden Biz",whyTitle:"Sıradan Bir\nAjans Değiliz.",whySub:"İçgüdüye değil, veriye güveniyoruz. Her karar, her kampanya kanıtlanmış bir stratejiye dayanıyor.",whyBtn:"Stratejinizi Konuşalım →",
@@ -136,7 +142,7 @@ const T={
     footer:{desc:"Veriye dayalı dijital pazarlama stratejileriyle markanızı büyütüyor, rakiplerinizin önüne geçiriyoruz.",h1:"Hizmetler",h2:"Şirket",h3:"İletişim",links1:["SEO","Google Ads","Sosyal Medya","İçerik","Web Tasarım"],links2:["Hakkımızda","Ekibimiz","Blog","Kariyer"],copy:"© 2025 PAZAR ZEKASI — TÜM HAKLARI SAKLIDIR",legal:"GİZLİLİK · KOŞULLAR"},
   },
   en:{
-    nav:{services:"Services",why:"Why Us",platforms:"Platforms",process:"Process",testimonials:"References",vision:"Vision",cta:"Get Quote"},
+    nav:{services:"Services",why:"Why Us",platforms:"Platforms",process:"Process",testimonials:"References",vision:"Vision",shooting:"Ad Shoots",manifesto:"Manifesto",cta:"Get Quote"},
     hero:{pre:"DIGITAL MARKETING AGENCY",line1:"Dominating",line2:"Digital",line3:"Markets.",sub:"We combine strategy, data and creativity to reach your audience at the right time with the right message.",btn1:"Get Free Analysis →",btn2:"Explore Services",s1:"Projects",s2:"Satisfaction",s3:"Experience"},
     svcTag:"Our Services",svcTitle:"Strong Presence\nOn Every Channel.",svcSub:"We manage all digital touchpoints of your brand with 360-degree digital marketing services.",
     whyTag:"Why Us",whyTitle:"We're Not\nJust an Agency.",whySub:"We trust data, not intuition. Every decision, every campaign is built on proven strategy.",whyBtn:"Let's Talk Strategy →",
@@ -458,7 +464,7 @@ function CinematicHeader({tag,title,sub,center}){
 }
 
 /* ── Navbar ── */
-function Navbar({lang,setLang,onQuote}){
+function Navbar({lang,setLang,onQuote,darkMode,toggleDark}){
   const[scrolled,setScrolled]=useState(false);const[menuOpen,setMenuOpen]=useState(false);
   const tx=T[lang];
   useEffect(()=>{const fn=()=>setScrolled(window.scrollY>40);window.addEventListener("scroll",fn,{passive:true});return()=>window.removeEventListener("scroll",fn);},[]);
@@ -471,6 +477,11 @@ function Navbar({lang,setLang,onQuote}){
     {id:"platformlar",label:tx.nav.platforms},
     {id:"surec",label:tx.nav.process},
     {id:"referanslar",label:tx.nav.testimonials},
+  ];
+  const NAV_MOB=[
+    ...NAV,
+    {id:"manifesto",label:tx.nav.manifesto},
+    {id:"reklam-cekimleri",label:tx.nav.shooting},
   ];
   return(<>
     <nav className={`navbar${scrolled?" sc":""}`}>
@@ -489,13 +500,15 @@ function Navbar({lang,setLang,onQuote}){
             <button className={`lang-btn${lang==="en"?" active":""}`} onClick={()=>setLang("en")} title="English"><GBFlag/></button>
           </div>
         </li>
+        <li><button className="theme-toggle" onClick={toggleDark} title={darkMode?"Light mode":"Dark mode"}>{darkMode?"☀️":"🌙"}</button></li>
         <li><button className="nav-btn" onClick={onQuote}>{tx.nav.cta}</button></li>
       </ul>
-      <div style={{display:"flex",alignItems:"center",gap:10}}>
+      <div style={{display:"flex",alignItems:"center",gap:8}}>
         <div className="lang-switcher lang-mob">
           <button className={`lang-btn${lang==="tr"?" active":""}`} onClick={()=>setLang("tr")}><TRFlag/></button>
           <button className={`lang-btn${lang==="en"?" active":""}`} onClick={()=>setLang("en")}><GBFlag/></button>
         </div>
+        <button className="theme-toggle theme-toggle-mob" onClick={toggleDark} title={darkMode?"Light mode":"Dark mode"}>{darkMode?"☀️":"🌙"}</button>
         <button className={`ham${menuOpen?" open":""}`} onClick={()=>setMenuOpen(v=>!v)} aria-label="Menu"><span/><span/><span/></button>
       </div>
     </nav>
@@ -505,7 +518,7 @@ function Navbar({lang,setLang,onQuote}){
         <BrainLogo size={28}/>
         <span>Pazar<em style={{color:"#00d4ff",fontStyle:"normal"}}>Z</em>ekası</span>
       </a>
-      <ul>{NAV.map(({id,label})=>(<li key={id}><a href={`#${id}`} onClick={close}>{label}</a></li>))}</ul>
+      <ul>{NAV_MOB.map(({id,label})=>(<li key={id}><a href={`#${id}`} onClick={close}>{label}</a></li>))}</ul>
       <button className="btn-p mob-cta-btn" onClick={()=>{close();onQuote();}}>{tx.nav.cta} →</button>
     </div>
   </>);
@@ -668,8 +681,8 @@ function Hero({lang,onQuote}){
   return(
     <section className="hero hero-split">
       <div className="hero-grid-bg"/><div className="hero-vignette"/>
-      <div className="wrap hero-wrap" style={{transform:`translateY(${parallaxY}px)`,opacity,willChange:"transform,opacity"}}>
-        <div className="hero-left">
+      <div className="wrap hero-wrap" style={{opacity,willChange:"opacity"}}>
+        <div className="hero-left" style={{transform:`translateY(${parallaxY}px)`,willChange:"transform"}}>
           <div className="hero-pre"><span className="blink-dot"/><span style={{fontFamily:"'Space Mono',monospace"}}>{preText}</span></div>
           <h1 className="hero-h1">
             <TypewriterLine text={tx.line1} delay={800} className="line-grad"/><br/>
@@ -679,14 +692,17 @@ function Hero({lang,onQuote}){
           <p className="hero-p">{tx.sub}</p>
           <div className="hero-ctas"><button className="btn-p" onClick={onQuote}>{tx.btn1}</button><MagBtn href="#hizmetler" className="btn-o">{tx.btn2}</MagBtn></div>
           <div className="hero-mini-stats">
-            <div className="hms-item"><span className="hms-num">350+</span><span className="hms-label">{tx.s1}</span></div>
+            <div className="hms-item"><span className="hms-num">120+</span><span className="hms-label">{tx.s1}</span></div>
             <div className="hms-div"/>
             <div className="hms-item"><span className="hms-num">%98</span><span className="hms-label">{tx.s2}</span></div>
             <div className="hms-div"/>
-            <div className="hms-item"><span className="hms-num">12 {lang==="tr"?"Yıl":"Years"}</span><span className="hms-label">{tx.s3}</span></div>
+            <div className="hms-item"><span className="hms-num">6+ {lang==="tr"?"Yıl":"Years"}</span><span className="hms-label">{tx.s3}</span></div>
           </div>
         </div>
-        <div className="hero-right"><HeroImage/></div>
+        <div className="hero-right">
+          <div className="hero-brain-wrap"><HeroImage/></div>
+          <img src="/hero_foto.png" className="hero-foto-mob" alt="Pazar Zekası"/>
+        </div>
       </div>
       <div className="scroll-indicator"><span className="scroll-txt">scroll</span><div className="scroll-line"/></div>
     </section>
@@ -788,6 +804,37 @@ function FaqSection({lang}){
   );
 }
 
+/* ── Policy Modal ── */
+const PRIVACY_TR=`GİZLİLİK POLİTİKASI\n\nSon güncelleme: Mayıs 2025\n\nPazar Zekası Dijital Pazarlama olarak kişisel verilerinizin güvenliği bizim için büyük önem taşımaktadır.\n\n1. TOPLANAN VERİLER\nSitemiz üzerinden iletişim formunu doldurduğunuzda ad-soyad, e-posta adresi ve telefon numarası gibi kişisel verilerinizi topluyoruz. Bu veriler yalnızca sizinle iletişime geçmek amacıyla kullanılır.\n\n2. VERİLERİN KULLANIMI\nTopladığımız veriler; teklif hazırlama, hizmet bilgilendirmesi ve müşteri desteği sağlama amaçlarıyla kullanılmaktadır. Verileriniz üçüncü taraflarla kesinlikle paylaşılmaz.\n\n3. ÇEREZLER\nSitemiz, kullanıcı deneyimini iyileştirmek amacıyla çerez kullanabilir. Tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilirsiniz.\n\n4. GÜVENLİK\nKişisel verileriniz SSL şifrelemesi ile korunmaktadır. Yetkisiz erişime karşı gerekli teknik ve idari tedbirler alınmıştır.\n\n5. İLETİŞİM\nGizlilik politikamız hakkında sorularınız için: info@pazarzekasi.com`;
+const PRIVACY_EN=`PRIVACY POLICY\n\nLast updated: May 2025\n\nAt Pazar Zekası Digital Marketing, the security of your personal data is of great importance to us.\n\n1. DATA COLLECTED\nWhen you fill out the contact form on our site, we collect personal data such as your full name, email address, and phone number. This data is used solely to contact you.\n\n2. USE OF DATA\nThe data we collect is used for preparing quotes, service information, and providing customer support. Your data is never shared with third parties.\n\n3. COOKIES\nOur site may use cookies to improve the user experience. You can disable cookies from your browser settings.\n\n4. SECURITY\nYour personal data is protected with SSL encryption. Necessary technical and administrative measures have been taken against unauthorized access.\n\n5. CONTACT\nFor questions about our privacy policy: info@pazarzekasi.com`;
+const TERMS_TR=`KULLANIM KOŞULLARI\n\nSon güncelleme: Mayıs 2025\n\n1. KABUL\nBu web sitesini kullanarak aşağıdaki kullanım koşullarını kabul etmiş sayılırsınız.\n\n2. HİZMETLER\nPazar Zekası Dijital Pazarlama, sosyal medya yönetimi, reklam yönetimi, SEO, içerik üretimi ve reklam çekimi hizmetleri sunmaktadır. Hizmet kapsamı ve fiyatlandırma, müşteri ile ayrıca belirlenir.\n\n3. FİKRİ MÜLKİYET\nSitemizde yer alan tüm içerik, görseller ve materyaller Pazar Zekası'na aittir. İzinsiz kopyalanamaz veya dağıtılamaz.\n\n4. SORUMLULUK SINIRI\nPazar Zekası, sunduğu hizmetlerin sonuçları konusunda genel taahhütler verse de, piyasa koşullarından kaynaklanan performans dalgalanmalarından sorumlu tutulamaz.\n\n5. DEĞİŞİKLİKLER\nBu koşullar önceden haber vermeksizin güncellenebilir. Güncel koşullar her zaman bu sayfada yayımlanır.\n\n6. İLETİŞİM\nKoşullar hakkında sorularınız için: info@pazarzekasi.com`;
+const TERMS_EN=`TERMS OF USE\n\nLast updated: May 2025\n\n1. ACCEPTANCE\nBy using this website, you are deemed to have accepted the following terms of use.\n\n2. SERVICES\nPazar Zekası Digital Marketing provides social media management, ad management, SEO, content production, and ad shooting services. Service scope and pricing are determined separately with each client.\n\n3. INTELLECTUAL PROPERTY\nAll content, images, and materials on our site belong to Pazar Zekası. They may not be copied or distributed without permission.\n\n4. LIABILITY\nWhile Pazar Zekası makes general commitments about service outcomes, it cannot be held responsible for performance fluctuations due to market conditions.\n\n5. CHANGES\nThese terms may be updated without prior notice. Current terms are always published on this page.\n\n6. CONTACT\nFor questions about the terms: info@pazarzekasi.com`;
+
+function PolicyModal({type,lang,onClose}){
+  if(!type)return null;
+  const isPrivacy=type==="privacy";
+  const isTR=lang==="tr";
+  const title=isPrivacy?(isTR?"Gizlilik Politikası":"Privacy Policy"):(isTR?"Kullanım Koşulları":"Terms of Use");
+  const body=isPrivacy?(isTR?PRIVACY_TR:PRIVACY_EN):(isTR?TERMS_TR:TERMS_EN);
+  return(
+    <div className="modal-overlay" onClick={e=>{if(e.target===e.currentTarget)onClose();}}>
+      <div className="modal-box policy-modal-box">
+        <button className="modal-close" onClick={onClose}>✕</button>
+        <div className="modal-head">
+          <h2 className="modal-title">{title}</h2>
+        </div>
+        <div className="policy-body">
+          {body.split("\n").map((line,i)=>(
+            line.trim()===""?<br key={i}/>:
+            /^[A-Z0-9À-ſ\s]{4,}$/.test(line.trim())&&line.trim().length<60?<h3 key={i} className="policy-h3">{line}</h3>:
+            <p key={i} className="policy-p">{line}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ── Vision Section ── */
 function VisionSection({lang}){
   const isTR=lang==="tr";
@@ -798,6 +845,7 @@ function VisionSection({lang}){
   return(
     <section className="section vision-section" id="vizyon">
       <div className="vision-bg"/>
+      <div className="vision-mob-bg"/>
       <div className="wrap">
         <div className="vision-grid">
           <div className={`vision-img-col${visible?" v":""}`}>
@@ -832,6 +880,56 @@ function VisionSection({lang}){
             </div>
             <div className="vision-pills">
               {pills.map((p,i)=><span key={i} className="vision-pill">{p}</span>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── Reklam Çekimleri Section ── */
+function ReklamCekimleriSection({lang}){
+  const isTR=lang==="tr";
+  const{ref,visible}=useFadeIn(0,.08);
+  const features=isTR
+    ?["Reels video çekimleri","Story içerik çekimleri","Instagram & Facebook gönderi çekimleri","Ürün ve mekan tanıtım videoları","Reklam kampanyalarına özel kısa videolar","Profesyonel ekipman ve yaratıcı kurgu desteği"]
+    :["Reels video shoots","Story content shoots","Instagram & Facebook post shoots","Product and location intro videos","Short videos for ad campaigns","Professional equipment and creative editing support"];
+  return(
+    <section className="section reklam-section" id="reklam-cekimleri">
+      <div className="reklam-bg"/>
+      <div className="reklam-mob-bg"/>
+      <div className="wrap">
+        <div className="reklam-grid">
+          <div ref={ref} className={`reklam-content${visible?" v":""}`}>
+            <div className="sec-tag">{isTR?"Sosyal Medya Reklam Çekimleri":"Social Media Ad Shoots"}</div>
+            <h2 className="reklam-title">
+              {isTR?<>Markanızı<br/>Dijitalde<br/>Öne Çıkarın.</>:<>Put Your Brand<br/>In The<br/>Spotlight.</>}
+            </h2>
+            <div className="reklam-line"/>
+            <p className="reklam-p">
+              {isTR
+                ?"Markanızı dijital dünyada öne çıkarmak için profesyonel sosyal medya içerikleri üretiyoruz. Pazar Zekası olarak işletmeniz için yaratıcı, dikkat çekici ve dönüşüm odaklı çekimler hazırlıyoruz."
+                :"We produce professional social media content to highlight your brand in the digital world. At Pazar Zekası, we prepare creative, attention-grabbing and conversion-focused shoots for your business."
+              }
+            </p>
+            <ul className="reklam-list">
+              {features.map((f,i)=>(
+                <li key={i} className="reklam-list-item">
+                  <span className="reklam-dot"/>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <div className="reklam-cta-box">
+              <span className="reklam-cta-icon">🚀</span>
+              <p>{isTR?"Hedefimiz: Etkileşim alan, güven veren ve satışa dönüşen içerikler üretmek.":"Our goal: To produce content that drives engagement, builds trust and converts to sales."}</p>
+            </div>
+          </div>
+          <div className={`reklam-img-col${visible?" v":""}`}>
+            <div className="reklam-img-wrap">
+              <img src="/reklam_cekimleri.jpeg" className="reklam-img" alt="Reklam Çekimleri"/>
+              <div className="reklam-img-shine"/>
             </div>
           </div>
         </div>
@@ -904,6 +1002,14 @@ function ManifestoSection({lang}){
 export default function PazarZekasi(){
   const[lang,setLang]=useState("tr");
   const[quoteOpen,setQuoteOpen]=useState(false);
+  const[policy,setPolicy]=useState(null);
+  const[darkMode,setDarkMode]=useState(true);
+  const toggleDark=()=>{
+    setDarkMode(v=>{
+      document.documentElement.setAttribute("data-theme",v?"light":"dark");
+      return !v;
+    });
+  };
   const tx=T[lang];
   const SERVICES=ALL_SERVICES[lang];
   const WHY_ITEMS=ALL_WHY[lang];
@@ -917,7 +1023,8 @@ export default function PazarZekasi(){
     <Style/><ScrollProgress/><CustomCursor/><ThreeBackground/><DotCanvas/>
     <WhatsAppBtn/>
     <QuoteModal open={quoteOpen} onClose={()=>setQuoteOpen(false)} lang={lang}/>
-    <Navbar lang={lang} setLang={setLang} onQuote={openQuote}/>
+    <PolicyModal type={policy} lang={lang} onClose={()=>setPolicy(null)}/>
+    <Navbar lang={lang} setLang={setLang} onQuote={openQuote} darkMode={darkMode} toggleDark={toggleDark}/>
     <Hero lang={lang} onQuote={openQuote}/>
 
     {/* STATS */}
@@ -934,6 +1041,9 @@ export default function PazarZekasi(){
 
     {/* VISION */}
     <VisionSection lang={lang}/>
+
+    {/* REKLAM ÇEKİMLERİ */}
+    <ReklamCekimleriSection lang={lang}/>
 
     {/* WHY */}
     <WhySection lang={lang} items={WHY_ITEMS}/>
@@ -966,7 +1076,7 @@ export default function PazarZekasi(){
         <div className="sec-tag">{tx.ctaTag}</div>
         <h2 className="cta-title">{tx.ctaTitle.split("\n").map((l,i)=><span key={i}>{l}{i===0&&<br/>}</span>)}</h2>
         <p className="cta-sub">{tx.ctaSub.split("\n").map((l,i)=><span key={i}>{l}{i===0&&<br/>}</span>)}</p>
-        <div className="cta-btns"><button className="btn-p" onClick={openQuote}>{tx.ctaBtn1}</button><MagBtn href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-o">{tx.ctaBtn2}</MagBtn></div>
+        <div className="cta-btns"><button className="btn-p" onClick={openQuote}>{tx.ctaBtn1}</button><button className="btn-o" onClick={()=>{window.location.href="tel:+905449742767"}}>{tx.ctaBtn2}</button></div>
       </div>
     </div></section>
 
@@ -975,15 +1085,20 @@ export default function PazarZekasi(){
       <div className="footer-grid">
         <div className="footer-brand">
           <a href="#" className="logo-wrap" style={{marginBottom:14,display:"inline-flex"}}>
-            <BrainLogo size={30}/>
+            <BrainLogo size={52}/>
             <div className="logo-text"><span className="logo-main">Pazar<em>Z</em>ekası</span><span className="logo-sub">{lang==="tr"?"Dijital Pazarlama Uzmanı":"Digital Marketing Expert"}</span></div>
           </a>
           <p className="footer-desc">{tx.footer.desc}</p>
-          <div className="footer-socials">{[IconInstagram,IconLinkedIn,IconXTwitter,IconFacebook].map((Icon,i)=>(<a key={i} href="#" className="footer-social-link"><Icon size={20}/></a>))}</div>
+          <div className="footer-socials">
+            <a href="https://www.instagram.com/pazarzekasi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="footer-social-link"><IconInstagram size={20}/></a>
+            <a href="https://www.facebook.com/profile.php?id=61589132075714&locale=tr_TR" target="_blank" rel="noopener noreferrer" className="footer-social-link"><IconFacebook size={20}/></a>
+            <a href="#" className="footer-social-link"><IconLinkedIn size={20}/></a>
+            <a href="#" className="footer-social-link"><IconXTwitter size={20}/></a>
+          </div>
         </div>
         {[{h:tx.footer.h1,links:tx.footer.links1},{h:tx.footer.h2,links:tx.footer.links2},{h:tx.footer.h3,links:["merhaba@pazarzekasi.com","LinkedIn","Instagram","Twitter/X"]}].map(col=>(<div key={col.h} className="footer-col"><h4 className="footer-col-h">{col.h}</h4><ul>{col.links.map(l=><li key={l}><a href="#">{l}</a></li>)}</ul></div>))}
       </div>
-      <div className="footer-bottom"><p>{tx.footer.copy}</p><p>{tx.footer.legal}</p></div>
+      <div className="footer-bottom"><p>{tx.footer.copy}</p><p className="footer-legal-links"><button className="footer-legal-btn" onClick={()=>setPolicy("privacy")}>{lang==="tr"?"GİZLİLİK":"PRIVACY"}</button><span> · </span><button className="footer-legal-btn" onClick={()=>setPolicy("terms")}>{lang==="tr"?"KOŞULLAR":"TERMS"}</button></p></div>
     </div></footer>
   </>);
 }
@@ -1057,20 +1172,20 @@ section{position:relative;z-index:2}
 @keyframes particleOrbit{0%{transform:rotate(calc(var(--i)*22.5deg)) translateX(calc(145px + var(--i)*5px)) rotate(calc(var(--i)*-22.5deg));opacity:.9}50%{opacity:.4}100%{transform:rotate(calc(var(--i)*22.5deg + 360deg)) translateX(calc(145px + var(--i)*5px)) rotate(calc(var(--i)*-22.5deg - 360deg));opacity:.9}}
 @keyframes shineSweep{0%{opacity:0;transform:translateX(-100%) rotate(-35deg)}40%{opacity:.5}60%{opacity:.5}100%{opacity:0;transform:translateX(200%) rotate(-35deg)}}
 @keyframes radialPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.1)}}
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 28px 80px;position:relative;overflow:hidden;max-width:100vw}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 28px 60px;position:relative;overflow:hidden;max-width:100vw}
 .hero-split{align-items:stretch}
-.hero-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:20px;align-items:center;width:100%;max-width:100%;padding:0 3%}
-.hero-left{text-align:left;display:flex;flex-direction:column;align-items:flex-start;padding-left:2%}
+.hero-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;align-items:center;width:100%;max-width:100%;padding:0 2%}
+.hero-left{text-align:left;display:flex;flex-direction:column;align-items:flex-start;padding-left:1%}
 .hero-right{display:flex;align-items:center;justify-content:center;position:relative}
 .hero-grid-bg{position:absolute;inset:0;background:linear-gradient(rgba(37,99,235,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.022) 1px,transparent 1px);background-size:48px 48px;animation:gridMove 28s linear infinite;pointer-events:none}
 .hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse 100% 100% at 50% 50%,transparent 30%,rgba(3,5,14,.8));pointer-events:none}
 .hero-pre{display:inline-flex;align-items:center;gap:7px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2.5px;color:var(--cyan);margin-bottom:22px;animation:fadeUp .6s ease both;min-height:20px}
 .blink-dot{width:4px;height:4px;background:var(--cyan);border-radius:50%;animation:blink .8s step-end infinite;flex-shrink:0}
-.hero-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(52px,5.5vw,96px);font-weight:700;line-height:.96;letter-spacing:-1px;margin-bottom:28px}
+.hero-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(56px,6vw,100px);font-weight:700;line-height:.96;letter-spacing:-1px;margin-bottom:24px}
 .line-grad{background:linear-gradient(125deg,#fff 0%,var(--purple) 25%,var(--glow) 55%,var(--cyan) 80%,#c084fc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 5s ease infinite}
 .line-em,.line-plain{color:var(--text);font-style:normal}
 .type-cur{display:inline-block;width:3px;background:var(--glow);margin-left:2px;animation:blink .5s step-end infinite;vertical-align:baseline}
-.hero-p{max-width:460px;font-size:16px;line-height:1.8;color:var(--text2);margin-bottom:36px;animation:fadeUp .7s .15s ease both;font-weight:300}
+.hero-p{max-width:480px;font-size:17px;line-height:1.75;color:var(--text2);margin-bottom:32px;animation:fadeUp .7s .15s ease both;font-weight:300}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
 .hero-mini-stats{display:flex;align-items:center;gap:20px;margin-top:36px;animation:fadeUp .7s .45s ease both}
 .hms-item{display:flex;flex-direction:column;gap:2px}
@@ -1083,6 +1198,13 @@ section{position:relative;z-index:2}
 .scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp .7s .8s ease both;z-index:3}
 .scroll-txt{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;color:var(--text3);text-transform:uppercase}
 .scroll-line{width:1px;height:42px;background:linear-gradient(to bottom,var(--text3),transparent);animation:scrollAnim 2s ease infinite}
+
+/* ── HERO MOBILE PHOTO ── */
+.hero-brain-wrap{display:block}
+.hero-foto-mob{display:none;width:100%;max-width:400px;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(139,92,246,.25),0 0 60px rgba(139,92,246,.12);height:auto}
+@media(max-width:1024px){.hero-brain-wrap{display:none}.hero-foto-mob{display:block;max-width:420px}}
+@media(max-width:768px){.hero-foto-mob{max-width:340px;border-radius:16px}}
+@media(max-width:480px){.hero-foto-mob{max-width:280px;border-radius:14px}}
 
 /* ── DIGITAL BRAIN CANVAS ── */
 .dbc-outer{position:relative;width:560px;height:420px;flex-shrink:0}
@@ -1144,7 +1266,7 @@ section{position:relative;z-index:2}
 .plat-card{background:var(--card);border:1px solid var(--b1);border-radius:var(--rl);padding:28px 24px;position:relative;overflow:hidden;opacity:0;transform:translateY(28px) scale(.97);transition:opacity .6s cubic-bezier(0.16,1,0.3,1),transform .7s cubic-bezier(0.34,1.56,0.64,1),border-color .3s,box-shadow .3s;backdrop-filter:blur(20px);will-change:transform;cursor:default}
 .plat-card.v{opacity:1;transform:translateY(0) scale(1)}
 .plat-card:hover{border-color:rgba(139,92,246,.3);box-shadow:0 20px 56px rgba(139,92,246,.1),0 8px 24px rgba(37,99,235,.08)}
-.plat-icon{width:62px;height:62px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:transform .4s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s;flex-shrink:0}
+.plat-icon{width:62px;height:62px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:transform .4s cubic-bezier(0.34,1.56,0.64,1),box-shadow .3s;flex-shrink:0}
 .plat-card:hover .plat-icon{transform:translateY(-5px) scale(1.07);box-shadow:0 14px 32px rgba(0,0,0,.45)}
 .plat-text{flex:1;min-width:0}
 .plat-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;margin-bottom:6px;letter-spacing:.3px}
@@ -1195,11 +1317,11 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 
 @media(max-width:1024px){
   .nav-ul{display:none}.ham{display:flex}
-  .hero{padding:90px 24px 72px}
-  .hero-wrap{grid-template-columns:1fr;gap:20px;text-align:center;padding:0}
+  .hero{padding:80px 24px 56px}
+  .hero-wrap{grid-template-columns:1fr;gap:12px;text-align:center;padding:0}
   .hero-left{align-items:center;text-align:center;padding-left:0}
   .hero-right{justify-content:center}
-  .hero-h1{font-size:clamp(46px,9vw,76px)}
+  .hero-h1{font-size:clamp(48px,9vw,80px)}
   .hero-p{max-width:580px;text-align:center}
   .hero-ctas{justify-content:center}
   .hero-mini-stats{justify-content:center}
@@ -1224,10 +1346,12 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 }
 
 @media(max-width:768px){
-  .navbar{padding:0 20px;height:60px}.logo{font-size:14px;letter-spacing:1.5px}
-  .hero{padding:80px 20px 56px;min-height:100svh}
-  .hero-wrap{gap:32px}
-  .hero-h1{font-size:clamp(36px,10vw,60px);letter-spacing:-.5px}
+  .navbar{padding:0 16px;height:58px}.logo{font-size:14px;letter-spacing:1.5px}
+  .logo-wrap svg{width:40px!important;height:40px!important}
+  .logo-main{font-size:15px;letter-spacing:.5px}
+  .hero{padding:72px 20px 48px;min-height:100svh}
+  .hero-wrap{gap:16px}
+  .hero-h1{font-size:clamp(38px,10vw,64px);letter-spacing:-.5px}
   .hero-p{font-size:15px;max-width:100%}
   .hero-ctas{flex-direction:column;align-items:center;gap:10px}
   .hero-ctas a{width:100%;max-width:320px;justify-content:center}
@@ -1266,7 +1390,12 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 }
 
 @media(max-width:600px){
-  .wrap{padding:0 16px}.navbar{padding:0 16px}
+  .wrap{padding:0 14px}.navbar{padding:0 14px}
+  .logo-wrap svg{width:34px!important;height:34px!important}
+  .logo-main{font-size:14px}
+  .lang-btn{padding:3px}.lang-switcher{padding:2px;gap:2px}
+  .theme-toggle-mob{width:30px;height:30px;font-size:14px}
+  .ham{width:32px}
   .hero{padding:76px 16px 52px}.hero-wrap{gap:24px}
   .hero-h1{font-size:clamp(32px,11vw,50px);line-height:1.0}
   .hero-mini-stats{justify-content:center;gap:10px}.hero-pre{font-size:9px;letter-spacing:1.5px}
@@ -1292,6 +1421,8 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 }
 
 @media(max-width:480px){
+  .logo-text{display:none}
+  .logo-wrap svg{width:32px!important;height:32px!important}
   .hero-h1{font-size:clamp(28px,12vw,46px)}
   .btn-p,.btn-o{padding:12px 20px;font-size:13px}
   .stat-num{font-size:32px}.stat-label{font-size:7px;letter-spacing:1px}
@@ -1358,6 +1489,7 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 .dbc-outer{position:relative;width:700px;height:525px;flex-shrink:0;transform-origin:top center;margin:0 auto}
 /* Scale formula: based on 700x525 canvas */
 .hero-right{overflow:hidden}
+@media(max-width:1024px){.hero-right{overflow:visible;padding-top:24px}}
 @media(max-width:1200px){
   .dbc-outer{transform:scale(0.92);transform-origin:top center;margin-bottom:calc(525px*(0.92 - 1))}
 }
@@ -1432,7 +1564,7 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 .manifesto-visual.v{opacity:1;transform:translateX(0)}
 .manifesto-mob-bg{display:none}
 .manifesto-img-wrap{position:absolute;inset:0;border-radius:28px;overflow:hidden;box-shadow:0 0 0 1px rgba(139,92,246,.3),0 32px 80px rgba(0,0,0,.55),0 0 80px rgba(139,92,246,.12)}
-.manifesto-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.manifesto-img{width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
 .manifesto-img-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(139,92,246,.1) 0%,transparent 50%,rgba(6,182,212,.08) 100%);pointer-events:none}
 
 @media(max-width:768px){
@@ -1482,6 +1614,134 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 .vision-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
 .vision-pill{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(6,182,212,.25);border-radius:20px;padding:6px 14px;background:rgba(6,182,212,.05);transition:all .3s}
 .vision-pill:hover{background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.5);transform:translateY(-2px)}
+
+/* ── REKLAM ÇEKİMLERİ ── */
+.reklam-section{padding:120px 0;position:relative;overflow:hidden}
+.reklam-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,182,212,.03) 0%,transparent 40%,rgba(139,92,246,.04) 100%);pointer-events:none}
+.reklam-grid{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:52px;align-items:center}
+.reklam-content{opacity:0;transform:translateX(-28px);transition:opacity .9s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1)}
+.reklam-content.v{opacity:1;transform:translateX(0)}
+.reklam-title{font-family:'Rajdhani',sans-serif;font-size:clamp(30px,3.5vw,52px);font-weight:700;letter-spacing:2px;background:linear-gradient(125deg,#fff 0%,var(--cyan) 40%,var(--purple) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 7s ease infinite;margin-bottom:16px;line-height:1.05}
+.reklam-line{width:80px;height:1px;background:linear-gradient(90deg,var(--cyan),var(--purple),transparent);margin:0 0 24px}
+.reklam-p{font-size:14.5px;color:var(--text2);line-height:1.85;font-weight:300;margin-bottom:20px}
+.reklam-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.reklam-list-item{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2);font-weight:300}
+.reklam-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex-shrink:0}
+.reklam-cta-box{display:flex;align-items:flex-start;gap:12px;background:linear-gradient(135deg,rgba(6,182,212,.07),rgba(139,92,246,.06));border:1px solid rgba(6,182,212,.2);border-radius:var(--r);padding:16px 18px}
+.reklam-cta-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.reklam-cta-box p{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:600;color:var(--text);line-height:1.5}
+.reklam-img-col{opacity:0;transform:translateX(28px);transition:opacity .9s .2s cubic-bezier(0.16,1,0.3,1),transform 1s .2s cubic-bezier(0.34,1.56,0.64,1)}
+.reklam-img-col.v{opacity:1;transform:translateX(0)}
+.reklam-img-wrap{border-radius:24px;overflow:hidden;box-shadow:0 0 0 1px rgba(6,182,212,.2),0 24px 60px rgba(0,0,0,.5),0 0 50px rgba(6,182,212,.07)}
+.reklam-img{width:100%;height:auto;display:block;object-fit:contain}
+.reklam-img-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,182,212,.08) 0%,transparent 50%,rgba(139,92,246,.06) 100%);pointer-events:none}
+
+/* ── POLICY MODAL ── */
+.policy-modal-box{max-height:80vh;display:flex;flex-direction:column}
+.policy-body{overflow-y:auto;padding:0 4px;margin-top:20px;flex:1;scrollbar-width:thin;scrollbar-color:var(--b2) transparent}
+.policy-h3{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--glow);letter-spacing:1px;margin:18px 0 6px}
+.policy-p{font-size:13.5px;color:var(--text2);line-height:1.85;font-weight:300}
+.footer-legal-links{display:flex;align-items:center;gap:4px}
+.footer-legal-btn{background:none;border:none;color:var(--text3);font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:color .2s;padding:2px 4px}
+.footer-legal-btn:hover{color:var(--glow)}
+
+/* ── THEME TOGGLE ── */
+.theme-toggle{background:none;border:1px solid var(--b2);border-radius:8px;color:var(--text2);font-size:16px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;padding:0}
+.theme-toggle:hover{border-color:var(--b3);background:rgba(37,99,235,.08)}
+.theme-toggle-mob{display:none}
+@media(max-width:1024px){.theme-toggle-mob{display:flex}}
+
+/* ── LIGHT MODE ── */
+[data-theme="light"]{--bg:#f0f4ff;--bg2:#e6ecfa;--bg3:#dae3f5;--text:#080f2a;--text2:#1a2f5e;--text3:#3d5080;--glow:#1d4ed8;--cyan:#0891b2;--purple:#6d28d9;--card:rgba(255,255,255,.97);--b1:rgba(37,99,235,.15);--b2:rgba(37,99,235,.28);--b3:rgba(37,99,235,.55)}
+[data-theme="light"] body{background:var(--bg);color:var(--text)}
+[data-theme="light"] .navbar{background:rgba(240,244,255,.97);border-bottom:1px solid rgba(37,99,235,.15)}
+[data-theme="light"] .navbar.sc{background:rgba(240,244,255,.98);box-shadow:0 4px 24px rgba(37,99,235,.1)}
+[data-theme="light"] .nav-link{color:var(--text2)}
+[data-theme="light"] .nav-link:hover{color:var(--purple)}
+[data-theme="light"] body::after{background:none}
+[data-theme="light"] .hero-sub,.hero-sub{color:var(--text2)}
+[data-theme="light"] .section-tag{color:var(--purple);border-color:rgba(109,40,217,.3);background:rgba(109,40,217,.08)}
+[data-theme="light"] .section-sub{color:var(--text2)}
+[data-theme="light"] .card{background:rgba(255,255,255,.95);border-color:rgba(37,99,235,.18)}
+[data-theme="light"] .card p,.card-desc{color:var(--text2)}
+[data-theme="light"] .stat-label{color:var(--text2)}
+[data-theme="light"] .why-card{background:rgba(255,255,255,.95);border-color:rgba(37,99,235,.2)}
+[data-theme="light"] .why-desc{color:var(--text2)}
+[data-theme="light"] .step-card{background:rgba(255,255,255,.95);border-color:rgba(37,99,235,.2)}
+[data-theme="light"] .step-desc{color:var(--text2)}
+[data-theme="light"] .test-card{background:rgba(255,255,255,.97);border-color:rgba(37,99,235,.18)}
+[data-theme="light"] .test-text{color:var(--text2)}
+[data-theme="light"] .test-role{color:var(--text3)}
+[data-theme="light"] .faq-item{border-color:rgba(37,99,235,.2)}
+[data-theme="light"] .faq-q{color:var(--text)}
+[data-theme="light"] .faq-a{color:var(--text2)}
+[data-theme="light"] .manifesto-section{background-image:none!important}
+[data-theme="light"] .manifesto-section::before{display:none}
+[data-theme="light"] .manifesto-bg{background:linear-gradient(135deg,rgba(109,40,217,.05) 0%,transparent 35%,rgba(37,99,235,.04) 100%)}
+[data-theme="light"] .manifesto-mob-bg{display:none!important}
+[data-theme="light"] .manifesto-title{color:var(--text)}
+[data-theme="light"] .manifesto-lead{color:var(--text2)}
+[data-theme="light"] .vision-title{color:var(--text)}
+[data-theme="light"] .vision-text{color:var(--text2)}
+[data-theme="light"] .reklam-title{color:var(--text)}
+[data-theme="light"] .reklam-desc{color:var(--text2)}
+[data-theme="light"] .footer-copy{color:var(--text3)}
+[data-theme="light"] .modal-overlay{background:rgba(8,15,42,.6)}
+[data-theme="light"] .modal-box{background:#fff;border-color:rgba(37,99,235,.2)}
+[data-theme="light"] .modal-title{color:var(--text)}
+[data-theme="light"] .modal-body{color:var(--text2)}
+[data-theme="light"] .stat-num{background:linear-gradient(135deg,#0a1f5c,var(--blue2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+[data-theme="light"] .hms-num{background:linear-gradient(135deg,#0a1f5c,var(--blue2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+[data-theme="light"] .line-grad{background:linear-gradient(125deg,#0a1635 0%,var(--purple) 28%,var(--blue2) 55%,var(--cyan) 80%,#4f1ca8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 5s ease infinite}
+[data-theme="light"] .line-em,[data-theme="light"] .line-plain{color:var(--text);-webkit-text-fill-color:var(--text)}
+[data-theme="light"] .sec-title{color:var(--text)}
+[data-theme="light"] .hero-pre{color:var(--cyan)}
+[data-theme="light"] .blink-dot{background:var(--cyan)}
+[data-theme="light"] .stat-bar-bg{background:rgba(37,99,235,.15)}
+[data-theme="light"] .hms-div{background:rgba(37,99,235,.25)}
+[data-theme="light"] .hms-label{color:var(--text3)}
+[data-theme="light"] .stat-label{color:var(--text3)}
+[data-theme="light"] .scroll-txt{color:var(--text3)}
+[data-theme="light"] .nav-ul a{color:var(--text2)}
+[data-theme="light"] .ham span{background:var(--text)}
+[data-theme="light"] .hero-vignette{background:radial-gradient(ellipse 100% 100% at 50% 50%,transparent 30%,rgba(240,244,255,.7))}
+[data-theme="light"] body::after{display:none}
+[data-theme="light"] .mob-menu{background:rgba(240,244,255,.99);border-left-color:rgba(37,99,235,.18)}
+[data-theme="light"] .mob-menu ul a{color:var(--text2)}
+[data-theme="light"] .mob-menu ul a:hover{color:var(--purple)}
+[data-theme="light"] .mob-menu ul li{border-bottom-color:rgba(37,99,235,.12)}
+[data-theme="light"] .mob-overlay{background:rgba(8,15,42,.45)}
+[data-theme="light"] .vision-section::after{background:linear-gradient(to bottom,rgba(240,244,255,.88) 0%,rgba(240,244,255,.52) 25%,rgba(240,244,255,.52) 75%,rgba(240,244,255,.88) 100%)}
+[data-theme="light"] .reklam-section::after{background:linear-gradient(to bottom,rgba(240,244,255,.88) 0%,rgba(240,244,255,.52) 25%,rgba(240,244,255,.52) 75%,rgba(240,244,255,.88) 100%)}
+[data-theme="light"] .vision-mob-bg{opacity:.45}
+[data-theme="light"] .reklam-mob-bg{opacity:.45}
+[data-theme="light"] .hero-grid-bg{background:linear-gradient(rgba(37,99,235,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.04) 1px,transparent 1px);background-size:48px 48px}
+
+/* ── VISION & REKLAM MOB BG ── */
+.vision-mob-bg,.reklam-mob-bg{display:none;position:absolute;inset:-20px;background-size:cover;background-position:center;filter:blur(10px);opacity:0;pointer-events:none}
+@media(max-width:768px){
+  /* vision mobile */
+  .vision-section{overflow:hidden;isolation:isolate}
+  .vision-mob-bg{display:block;background-image:url('/pazar_zekasi2.jpeg');opacity:.6}
+  .vision-section::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(3,5,14,.85) 0%,rgba(3,5,14,.28) 25%,rgba(3,5,14,.28) 75%,rgba(3,5,14,.85) 100%);z-index:1;pointer-events:none}
+  .vision-img-col{display:none}
+  .vision-grid{grid-template-columns:1fr}
+  .vision-content{position:relative;z-index:2}
+  /* reklam mobile */
+  .reklam-section{overflow:hidden;isolation:isolate;padding:72px 0}
+  .reklam-mob-bg{display:block;background-image:url('/reklam_cekimleri.jpeg');opacity:.6}
+  .reklam-section::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(3,5,14,.85) 0%,rgba(3,5,14,.28) 25%,rgba(3,5,14,.28) 75%,rgba(3,5,14,.85) 100%);z-index:1;pointer-events:none}
+  .reklam-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .reklam-content{transform:translateY(28px);position:relative;z-index:2}.reklam-content.v{transform:translateY(0)}
+  .reklam-img-col{display:none}
+  .reklam-title{font-size:clamp(28px,7vw,44px)}
+}
+/* REKLAM responsive ── */
+@media(max-width:900px){.reklam-grid{gap:40px}}
+@media(max-width:480px){
+  .reklam-section{padding:56px 0}
+  .reklam-p{font-size:14px}.reklam-list-item{font-size:13.5px}
+}
 `;
 
 

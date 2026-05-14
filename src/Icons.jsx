@@ -1,10 +1,13 @@
 /* ─── Social Media & Platform SVG Icons ─── */
+import { useId } from "react";
 
 export function IconInstagram({ size = 28 }) {
+  const uid = useId().replace(/:/g, "");
+  const g = `ig-${uid}`;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <defs>
-        <radialGradient id="ig1" cx="30%" cy="107%" r="100%">
+        <radialGradient id={g} cx="30%" cy="107%" r="100%">
           <stop offset="0%" stopColor="#fdf497" />
           <stop offset="5%" stopColor="#fdf497" />
           <stop offset="45%" stopColor="#fd5949" />
@@ -12,7 +15,7 @@ export function IconInstagram({ size = 28 }) {
           <stop offset="90%" stopColor="#285AEB" />
         </radialGradient>
       </defs>
-      <rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig1)" />
+      <rect x="2" y="2" width="20" height="20" rx="5.5" fill={`url(#${g})`} />
       <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.8" fill="none" />
       <circle cx="17.2" cy="6.8" r="1.2" fill="white" />
     </svg>
@@ -20,15 +23,17 @@ export function IconInstagram({ size = 28 }) {
 }
 
 export function IconMeta({ size = 28 }) {
+  const uid = useId().replace(/:/g, "");
+  const g = `meta-${uid}`;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <defs>
-        <linearGradient id="meta1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id={g} x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#0081FB" />
           <stop offset="100%" stopColor="#0064E0" />
         </linearGradient>
       </defs>
-      <rect width="24" height="24" rx="5" fill="url(#meta1)" />
+      <rect width="24" height="24" rx="5" fill={`url(#${g})`} />
       <path d="M4.5 15.5C4.5 13.5 5.5 11.5 7 10C8.2 8.8 9.5 8.5 10.5 9C11.2 9.4 11.8 10.2 12 11C12.2 10.2 12.8 9.4 13.5 9C14.5 8.5 15.8 8.8 17 10C18.5 11.5 19.5 13.5 19.5 15.5C19.5 17 18.5 17.5 17.5 17.5C16.2 17.5 15 16.5 14 15C13.5 14.2 13 13.2 12 13.2C11 13.2 10.5 14.2 10 15C9 16.5 7.8 17.5 6.5 17.5C5.5 17.5 4.5 17 4.5 15.5Z" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
     </svg>
   );
@@ -47,15 +52,17 @@ export function IconGoogle({ size = 28 }) {
 }
 
 export function IconLinkedIn({ size = 28 }) {
+  const uid = useId().replace(/:/g, "");
+  const g = `li-${uid}`;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <defs>
-        <linearGradient id="li1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id={g} x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#0A66C2" />
           <stop offset="100%" stopColor="#004182" />
         </linearGradient>
       </defs>
-      <rect width="24" height="24" rx="5" fill="url(#li1)" />
+      <rect width="24" height="24" rx="5" fill={`url(#${g})`} />
       <path d="M7.5 9.5H5.5V18H7.5V9.5Z" fill="white" />
       <circle cx="6.5" cy="7" r="1.2" fill="white" />
       <path d="M18 18H16V13.5C16 12.4 15.1 11.5 14 11.5C12.9 11.5 12 12.4 12 13.5V18H10V9.5H12V10.8C12.6 10 13.7 9.5 14.8 9.5C16.6 9.5 18 11 18 12.8V18Z" fill="white" />
@@ -64,15 +71,17 @@ export function IconLinkedIn({ size = 28 }) {
 }
 
 export function IconYouTube({ size = 28 }) {
+  const uid = useId().replace(/:/g, "");
+  const g = `yt-${uid}`;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <defs>
-        <linearGradient id="yt1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id={g} x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#FF0000" />
           <stop offset="100%" stopColor="#CC0000" />
         </linearGradient>
       </defs>
-      <rect width="24" height="24" rx="5" fill="url(#yt1)" />
+      <rect width="24" height="24" rx="5" fill={`url(#${g})`} />
       <path d="M19.5 8.5C19.3 7.7 18.7 7.1 17.9 6.9C16.5 6.5 12 6.5 12 6.5C12 6.5 7.5 6.5 6.1 6.9C5.3 7.1 4.7 7.7 4.5 8.5C4.1 9.9 4.1 12 4.1 12C4.1 12 4.1 14.1 4.5 15.5C4.7 16.3 5.3 16.9 6.1 17.1C7.5 17.5 12 17.5 12 17.5C12 17.5 16.5 17.5 17.9 17.1C18.7 16.9 19.3 16.3 19.5 15.5C19.9 14.1 19.9 12 19.9 12C19.9 12 19.9 9.9 19.5 8.5Z" fill="white" fillOpacity="0.2" />
       <polygon points="10,9.5 10,14.5 15,12" fill="white" />
     </svg>
@@ -90,15 +99,17 @@ export function IconTikTok({ size = 28 }) {
 }
 
 export function IconFacebook({ size = 28 }) {
+  const uid = useId().replace(/:/g, "");
+  const g = `fb-${uid}`;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <defs>
-        <linearGradient id="fb1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <linearGradient id={g} x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#18ACFE" />
           <stop offset="100%" stopColor="#0163E0" />
         </linearGradient>
       </defs>
-      <rect width="24" height="24" rx="5" fill="url(#fb1)" />
+      <rect width="24" height="24" rx="5" fill={`url(#${g})`} />
       <path d="M13.5 21V13.5H16L16.5 10.5H13.5V8.5C13.5 7.7 13.7 7 15 7H16.5V4.3C15.8 4.2 14.6 4 13.4 4C11 4 9.5 5.4 9.5 8.2V10.5H7V13.5H9.5V21H13.5Z" fill="white" />
     </svg>
   );
