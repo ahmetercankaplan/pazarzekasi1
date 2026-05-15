@@ -139,7 +139,7 @@ const T={
       {q:"Sadece reklam yönetimi hizmeti alabilir miyim?",a:"Elbette. İhtiyacınıza göre yalnızca reklam yönetimi veya tam kapsamlı dijital pazarlama hizmeti sunabiliyoruz."},
       {q:"Neden Pazar Zekası Dijital Pazarlama Ajansı?",a:"Çünkü biz yalnızca reklam yayınlamıyoruz. Hedef kitlenizi analiz eden, satış odaklı stratejiler geliştiren ve markanızın büyümesine odaklanan profesyonel çözümler sunuyoruz."},
     ],
-    footer:{desc:"Veriye dayalı dijital pazarlama stratejileriyle markanızı büyütüyor, rakiplerinizin önüne geçiriyoruz.",h1:"Hizmetler",h2:"Şirket",h3:"İletişim",links1:["SEO","Google Ads","Sosyal Medya","İçerik","Web Tasarım"],links2:["Hakkımızda","Ekibimiz","Blog","Kariyer"],copy:"© 2025 PAZAR ZEKASI — TÜM HAKLARI SAKLIDIR",legal:"GİZLİLİK · KOŞULLAR"},
+    footer:{desc:"Veriye dayalı dijital pazarlama stratejileriyle markanızı büyütüyor, rakiplerinizin önüne geçiriyoruz.",h1:"Hizmetler",h2:"Şirket",h3:"İletişim",links1:["SEO","Google Ads","Sosyal Medya","İçerik","Web Tasarım"],links2:["Hakkımızda","Ekibimiz","Blog","Kariyer"],copy:"© 2026 PAZAR ZEKASI — TÜM HAKLARI SAKLIDIR",legal:"GİZLİLİK · KOŞULLAR"},
   },
   en:{
     nav:{services:"Services",why:"Why Us",platforms:"Platforms",process:"Process",testimonials:"References",vision:"Vision",shooting:"Ad Shoots",manifesto:"Manifesto",cta:"Get Quote"},
@@ -165,7 +165,7 @@ const T={
       {q:"Can I get only ad management service?",a:"Of course. Depending on your needs, we can provide just ad management or full-scale digital marketing services."},
       {q:"Why Pazar Zekası Digital Marketing Agency?",a:"Because we don't just run ads. We provide professional solutions that analyze your target audience, develop sales-focused strategies, and focus on growing your brand."},
     ],
-    footer:{desc:"We grow your brand with data-driven digital marketing strategies, putting you ahead of the competition.",h1:"Services",h2:"Company",h3:"Contact",links1:["SEO","Google Ads","Social Media","Content","Web Design"],links2:["About","Team","Blog","Careers"],copy:"© 2025 PAZAR ZEKASI — ALL RIGHTS RESERVED",legal:"PRIVACY · TERMS"},
+    footer:{desc:"We grow your brand with data-driven digital marketing strategies, putting you ahead of the competition.",h1:"Services",h2:"Company",h3:"Contact",links1:["SEO","Google Ads","Social Media","Content","Web Design"],links2:["About","Team","Blog","Careers"],copy:"© 2026 PAZAR ZEKASI — ALL RIGHTS RESERVED",legal:"PRIVACY · TERMS"},
   }
 };
 
@@ -477,6 +477,7 @@ function Navbar({lang,setLang,onQuote,darkMode,toggleDark}){
     {id:"platformlar",label:tx.nav.platforms},
     {id:"surec",label:tx.nav.process},
     {id:"referanslar",label:tx.nav.testimonials},
+    {id:"manifesto",label:tx.nav.manifesto},
   ];
   const NAV_MOB=[
     ...NAV,
@@ -740,8 +741,8 @@ function Hero({lang,onQuote}){
   return(
     <section className="hero hero-split">
       <div className="hero-grid-bg"/><div className="hero-vignette"/>
-      <div className="wrap hero-wrap" style={{opacity,willChange:"opacity"}}>
-        <div className="hero-left" style={{transform:`translateY(${parallaxY}px)`,willChange:"transform"}}>
+      <div className="wrap hero-wrap">
+        <div className="hero-left" style={{transform:`translateY(${parallaxY}px)`,opacity,willChange:"transform,opacity"}}>
           <div className="hero-pre"><span className="blink-dot"/><span style={{fontFamily:"'Space Mono',monospace"}}>{preText}</span></div>
           <h1 className="hero-h1">
             <TypewriterLine text={tx.line1} delay={800} className="line-grad"/><br/>
@@ -763,7 +764,6 @@ function Hero({lang,onQuote}){
           <img src="/hero_foto_2.png" className="hero-foto-mob" alt="Pazar Zekası"/>
         </div>
       </div>
-      <div className="scroll-indicator"><span className="scroll-txt">scroll</span><div className="scroll-line"/></div>
     </section>
   );
 }
@@ -1062,7 +1062,8 @@ export default function PazarZekasi(){
   const[lang,setLang]=useState("tr");
   const[quoteOpen,setQuoteOpen]=useState(false);
   const[policy,setPolicy]=useState(null);
-  const[darkMode,setDarkMode]=useState(true);
+  const[darkMode,setDarkMode]=useState(false);
+  useEffect(()=>{document.documentElement.setAttribute("data-theme","light");},[]);
   const toggleDark=()=>{
     setDarkMode(v=>{
       document.documentElement.setAttribute("data-theme",v?"light":"dark");
@@ -1135,7 +1136,7 @@ export default function PazarZekasi(){
         <div className="sec-tag">{tx.ctaTag}</div>
         <h2 className="cta-title">{tx.ctaTitle.split("\n").map((l,i)=><span key={i}>{l}{i===0&&<br/>}</span>)}</h2>
         <p className="cta-sub">{tx.ctaSub.split("\n").map((l,i)=><span key={i}>{l}{i===0&&<br/>}</span>)}</p>
-        <div className="cta-btns"><button className="btn-p" onClick={openQuote}>{tx.ctaBtn1}</button><button className="btn-o" onClick={()=>{window.location.href="tel:+905449742767"}}>{tx.ctaBtn2}</button></div>
+        <div className="cta-btns"><button className="btn-p" onClick={openQuote}>{tx.ctaBtn1}</button><button className="btn-o" onClick={()=>{window.location.href="tel:+905449742767"}}>{tx.ctaBtn2}</button><a href="https://www.instagram.com/pazarzekasi/" target="_blank" rel="noopener noreferrer" className="btn-o cta-ig-btn"><IconInstagram size={18}/>{lang==="tr"?"Instagram'da Takip Et":"Follow on Instagram"}</a></div>
       </div>
     </div></section>
 
@@ -1143,9 +1144,9 @@ export default function PazarZekasi(){
     <footer><div className="wrap">
       <div className="footer-grid">
         <div className="footer-brand">
-          <a href="#" className="logo-wrap" style={{marginBottom:14,display:"inline-flex"}}>
-            <BrainLogo size={52}/>
-            <div className="logo-text"><span className="logo-main">Pazar<em>Z</em>ekası</span><span className="logo-sub">{lang==="tr"?"Dijital Pazarlama Uzmanı":"Digital Marketing Expert"}</span></div>
+          <a href="#" className="footer-logo-wrap" style={{marginBottom:18,display:"flex",alignItems:"center",gap:16,textDecoration:"none"}}>
+            <BrainLogo size={88}/>
+            <div className="logo-text"><span className="logo-main" style={{fontSize:28,letterSpacing:"1px"}}>Pazar<em>Z</em>ekası</span><span className="logo-sub">{lang==="tr"?"Dijital Pazarlama Uzmanı":"Digital Marketing Expert"}</span></div>
           </a>
           <p className="footer-desc">{tx.footer.desc}</p>
           <div className="footer-socials">
@@ -1155,7 +1156,8 @@ export default function PazarZekasi(){
             <a href="#" className="footer-social-link"><IconXTwitter size={20}/></a>
           </div>
         </div>
-        {[{h:tx.footer.h1,links:tx.footer.links1},{h:tx.footer.h2,links:tx.footer.links2},{h:tx.footer.h3,links:["merhaba@pazarzekasi.com","LinkedIn","Instagram","Twitter/X"]}].map(col=>(<div key={col.h} className="footer-col"><h4 className="footer-col-h">{col.h}</h4><ul>{col.links.map(l=><li key={l}><a href="#">{l}</a></li>)}</ul></div>))}
+        {[{h:tx.footer.h1,links:tx.footer.links1},{h:tx.footer.h2,links:tx.footer.links2}].map(col=>(<div key={col.h} className="footer-col"><h4 className="footer-col-h">{col.h}</h4><ul>{col.links.map(l=><li key={l}><a href="#">{l}</a></li>)}</ul></div>))}
+        <div className="footer-col"><h4 className="footer-col-h">{tx.footer.h3}</h4><ul><li><a href="mailto:merhaba@pazarzekasi.com">merhaba@pazarzekasi.com</a></li><li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://www.instagram.com/pazarzekasi/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="#" target="_blank" rel="noopener noreferrer">Twitter/X</a></li></ul></div>
       </div>
       <div className="footer-bottom"><p>{tx.footer.copy}</p><p className="footer-legal-links"><button className="footer-legal-btn" onClick={()=>setPolicy("privacy")}>{lang==="tr"?"GİZLİLİK":"PRIVACY"}</button><span> · </span><button className="footer-legal-btn" onClick={()=>setPolicy("terms")}>{lang==="tr"?"KOŞULLAR":"TERMS"}</button></p></div>
     </div></footer>
@@ -1378,6 +1380,8 @@ section{position:relative;z-index:2}
 .cta-title{font-family:'Rajdhani',sans-serif;font-size:clamp(36px,4.5vw,60px);font-weight:700;letter-spacing:-.5px;margin-bottom:18px;position:relative;z-index:1}
 .cta-sub{font-size:16px;color:var(--text2);margin-bottom:40px;position:relative;z-index:1;font-weight:300}
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.cta-ig-btn{border-color:rgba(214,36,159,.35)!important;color:var(--text)!important}
+.cta-ig-btn:hover{border-color:rgba(214,36,159,.7)!important;background:rgba(214,36,159,.08)!important}
 footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-index:2}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
 .footer-desc{font-size:13px;color:var(--text3);line-height:1.7;max-width:240px;font-weight:300;margin-bottom:20px}
