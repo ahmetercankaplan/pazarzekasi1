@@ -117,7 +117,7 @@ const ALL_PLATFORMS={
 const T={
   tr:{
     nav:{services:"Hizmetler",why:"Neden Biz",platforms:"Platformlar",process:"Süreç",testimonials:"Referanslar",vision:"Vizyon",shooting:"Reklam Çekimleri",manifesto:"Manifesto",cta:"Teklif Al"},
-    hero:{pre:"DİJİTAL PAZARLAMA AJANSI",line1:"Dijitalde",line2:"Zirveye",line3:"Taşıyoruz.",sub:"Strateji, veri ve yaratıcılığı birleştirerek markanızı doğru kitleye, doğru zamanda ulaştırıyoruz.",btn1:"Ücretsiz Analiz Al →",btn2:"Hizmetleri Keşfet",s1:"Proje",s2:"Memnuniyet",s3:"Deneyim"},
+    hero:{pre:"DİJİTAL PAZARLAMA AJANSI",line1:"Firmanızı dijitalde",line2:"Zirveye",line3:"Çıkarıyoruz.",sub:"Strateji, veri ve yaratıcılığı birleştirerek markanızı doğru kitleye, doğru zamanda ulaştırıyoruz.",btn1:"Ücretsiz Analiz Al →",btn2:"Hizmetleri Keşfet",s1:"Proje",s2:"Memnuniyet",s3:"Deneyim"},
     svcTag:"Hizmetlerimiz",svcTitle:"Her Kanalda\nGüçlü Varlık.",svcSub:"360 derece dijital pazarlama hizmetleriyle markanızın tüm temas noktalarını yönetiyoruz.",
     whyTag:"Neden Biz",whyTitle:"Sıradan Bir\nAjans Değiliz.",whySub:"İçgüdüye değil, veriye güveniyoruz. Her karar, her kampanya kanıtlanmış bir stratejiye dayanıyor.",whyBtn:"Stratejinizi Konuşalım →",
     platTag:"Çalıştığımız Platformlar",platTitle:"Her Platformda\nUzman Ekip.",platSub:"Tüm dijital mecralarda etkin varlık ve kanıtlanmış performans.",
@@ -515,7 +515,7 @@ function Navbar({lang,setLang,onQuote,darkMode,toggleDark}){
     <div className={`mob-overlay${menuOpen?" open":""}`} onClick={close}/>
     <div className={`mob-menu${menuOpen?" open":""}`}>
       <a href="#" className="mob-logo" onClick={close}>
-        <BrainLogo size={44}/>
+        <BrainLogo size={56}/>
         <div style={{display:"flex",flexDirection:"column",gap:2}}>
           <span style={{fontSize:20,letterSpacing:"1px"}}>Pazar<em style={{color:"#00d4ff",fontStyle:"normal"}}>Z</em>ekası</span>
           <span style={{fontFamily:"'Space Grotesk',sans-serif",fontSize:9,color:"var(--text3)",letterSpacing:"1.5px",textTransform:"uppercase"}}>Dijital Pazarlama</span>
@@ -1149,7 +1149,7 @@ export default function PazarZekasi(){
           </a>
           <p className="footer-desc">{tx.footer.desc}</p>
           <div className="footer-socials">
-            <a href="https://www.instagram.com/pazarzekasi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="footer-social-link"><IconInstagram size={20}/></a>
+            <a href="https://www.instagram.com/pazarzekasi/" target="_blank" rel="noopener noreferrer" className="footer-social-link"><IconInstagram size={20}/></a>
             <a href="https://www.facebook.com/profile.php?id=61589132075714&locale=tr_TR" target="_blank" rel="noopener noreferrer" className="footer-social-link"><IconFacebook size={20}/></a>
             <a href="#" className="footer-social-link"><IconLinkedIn size={20}/></a>
             <a href="#" className="footer-social-link"><IconXTwitter size={20}/></a>
@@ -1240,7 +1240,7 @@ section{position:relative;z-index:2}
 .hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse 100% 100% at 50% 50%,transparent 30%,rgba(3,5,14,.8));pointer-events:none}
 .hero-pre{display:inline-flex;align-items:center;gap:7px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2.5px;color:var(--cyan);margin-bottom:22px;animation:fadeUp .6s ease both;min-height:20px}
 .blink-dot{width:4px;height:4px;background:var(--cyan);border-radius:50%;animation:blink .8s step-end infinite;flex-shrink:0}
-.hero-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(56px,6vw,100px);font-weight:700;line-height:.96;letter-spacing:-1px;margin-bottom:24px}
+.hero-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(44px,4.5vw,76px);font-weight:700;line-height:.96;letter-spacing:-1px;margin-bottom:24px}
 .line-grad{background:linear-gradient(125deg,#fff 0%,var(--purple) 25%,var(--glow) 55%,var(--cyan) 80%,#c084fc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:gradAnim 5s ease infinite}
 .line-em,.line-plain{color:var(--text);font-style:normal}
 .type-cur{display:inline-block;width:3px;background:var(--glow);margin-left:2px;animation:blink .5s step-end infinite;vertical-align:baseline}
