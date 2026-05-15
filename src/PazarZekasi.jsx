@@ -515,8 +515,11 @@ function Navbar({lang,setLang,onQuote,darkMode,toggleDark}){
     <div className={`mob-overlay${menuOpen?" open":""}`} onClick={close}/>
     <div className={`mob-menu${menuOpen?" open":""}`}>
       <a href="#" className="mob-logo" onClick={close}>
-        <BrainLogo size={28}/>
-        <span>Pazar<em style={{color:"#00d4ff",fontStyle:"normal"}}>Z</em>ekası</span>
+        <BrainLogo size={44}/>
+        <div style={{display:"flex",flexDirection:"column",gap:2}}>
+          <span style={{fontSize:20,letterSpacing:"1px"}}>Pazar<em style={{color:"#00d4ff",fontStyle:"normal"}}>Z</em>ekası</span>
+          <span style={{fontFamily:"'Space Grotesk',sans-serif",fontSize:9,color:"var(--text3)",letterSpacing:"1.5px",textTransform:"uppercase"}}>Dijital Pazarlama</span>
+        </div>
       </a>
       <ul>{NAV_MOB.map(({id,label})=>(<li key={id}><a href={`#${id}`} onClick={close}>{label}</a></li>))}</ul>
       <button className="btn-p mob-cta-btn" onClick={()=>{close();onQuote();}}>{tx.nav.cta} →</button>
@@ -664,7 +667,63 @@ function DigitalBrainCanvas(){
   );
 }
 
-function HeroImage(){ return <DigitalBrainCanvas/>; }
+function HeroImage(){
+  const frameRef=useRef(null);
+  const hoverRef=useRef(false);
+  const tgt=useRef({rx:0,ry:0});
+  const cur=useRef({rx:0,ry:0});
+  const lerp=(a,b,t)=>a+(b-a)*t;
+
+  useEffect(()=>{
+    let raf,phase=0;
+    const tick=()=>{
+      phase+=0.008;
+      if(hoverRef.current){
+        cur.current.rx=lerp(cur.current.rx,tgt.current.rx,0.07);
+        cur.current.ry=lerp(cur.current.ry,tgt.current.ry,0.07);
+      } else {
+        const autoRx=Math.sin(phase*0.7)*4+Math.sin(phase*0.3)*2;
+        const autoRy=Math.sin(phase)*8+Math.cos(phase*0.5)*4;
+        const autoY=Math.sin(phase*0.8)*10;
+        cur.current.rx=lerp(cur.current.rx,autoRx,0.04);
+        cur.current.ry=lerp(cur.current.ry,autoRy,0.04);
+        tgt.current={rx:autoRx,ry:autoRy};
+        if(frameRef.current) frameRef.current.style.setProperty("--ty",`${autoY}px`);
+      }
+      if(frameRef.current){
+        const scale=hoverRef.current?1.04:1;
+        frameRef.current.style.transform=`perspective(1100px) rotateX(${cur.current.rx}deg) rotateY(${cur.current.ry}deg) translateY(var(--ty,0px)) scale(${scale})`;
+      }
+      raf=requestAnimationFrame(tick);
+    };
+    raf=requestAnimationFrame(tick);
+    return()=>cancelAnimationFrame(raf);
+  },[]);
+
+  const onMouseMove=useCallback((e)=>{
+    if(!frameRef.current) return;
+    hoverRef.current=true;
+    const r=frameRef.current.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-0.5;
+    const y=(e.clientY-r.top)/r.height-0.5;
+    tgt.current={rx:-y*22,ry:x*28};
+  },[]);
+  const onMouseLeave=useCallback(()=>{hoverRef.current=false;},[]);
+
+  return(
+    <div className="hero-img-frame" ref={frameRef} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave}>
+      <div className="hero-img-glow"/>
+      <div className="hero-img-glow hero-img-glow-2"/>
+      <div className="hero-img-glow hero-img-glow-3"/>
+      <img src="/hero_foto_2.png" className="hero-img-main" alt="Pazar Zekası"/>
+      <div className="hero-img-shine"/>
+      <div className="hero-img-scan"/>
+      <div className="hero-img-corner hero-img-corner-tl"/>
+      <div className="hero-img-corner hero-img-corner-br"/>
+      <div className="hero-img-border"/>
+    </div>
+  );
+}
 
 /* ── Hero ── */
 function Hero({lang,onQuote}){
@@ -701,7 +760,7 @@ function Hero({lang,onQuote}){
         </div>
         <div className="hero-right">
           <div className="hero-brain-wrap"><HeroImage/></div>
-          <img src="/hero_foto.png" className="hero-foto-mob" alt="Pazar Zekası"/>
+          <img src="/hero_foto_2.png" className="hero-foto-mob" alt="Pazar Zekası"/>
         </div>
       </div>
       <div className="scroll-indicator"><span className="scroll-txt">scroll</span><div className="scroll-line"/></div>
@@ -1174,7 +1233,7 @@ section{position:relative;z-index:2}
 @keyframes radialPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.1)}}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 28px 60px;position:relative;overflow:hidden;max-width:100vw}
 .hero-split{align-items:stretch}
-.hero-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;align-items:center;width:100%;max-width:100%;padding:0 2%}
+.hero-wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:20px;align-items:center;width:100%;max-width:100%;padding:0}
 .hero-left{text-align:left;display:flex;flex-direction:column;align-items:flex-start;padding-left:1%}
 .hero-right{display:flex;align-items:center;justify-content:center;position:relative}
 .hero-grid-bg{position:absolute;inset:0;background:linear-gradient(rgba(37,99,235,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.022) 1px,transparent 1px);background-size:48px 48px;animation:gridMove 28s linear infinite;pointer-events:none}
@@ -1198,6 +1257,24 @@ section{position:relative;z-index:2}
 .scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeUp .7s .8s ease both;z-index:3}
 .scroll-txt{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;color:var(--text3);text-transform:uppercase}
 .scroll-line{width:1px;height:42px;background:linear-gradient(to bottom,var(--text3),transparent);animation:scrollAnim 2s ease infinite}
+
+/* ── HERO DESKTOP IMAGE 3D ── */
+@keyframes heroBorderSpin{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes heroGlowPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes heroScanLine{0%{top:-4%;opacity:0}5%{opacity:1}92%{opacity:.8}100%{top:104%;opacity:0}}
+@keyframes heroCornerPulse{0%,100%{opacity:.5;box-shadow:0 0 8px rgba(6,182,212,.4)}50%{opacity:1;box-shadow:0 0 18px rgba(6,182,212,.9),0 0 32px rgba(6,182,212,.4)}}
+.hero-img-frame{position:relative;border-radius:32px;width:100%;max-width:780px;transform-style:preserve-3d;will-change:transform;--ty:0px;cursor:crosshair}
+.hero-img-main{width:100%;height:auto;display:block;border-radius:30px;box-shadow:0 40px 100px rgba(0,0,0,.65),0 8px 32px rgba(0,0,0,.45)}
+.hero-img-border{position:absolute;inset:-2px;border-radius:32px;background:linear-gradient(135deg,rgba(139,92,246,.9),rgba(6,182,212,.7),rgba(192,132,252,.6),rgba(96,165,250,.8));background-size:300% 300%;animation:heroBorderSpin 3.5s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:2px;pointer-events:none}
+.hero-img-glow{position:absolute;pointer-events:none;filter:blur(40px);animation:heroGlowPulse 3.5s ease-in-out infinite}
+.hero-img-glow:nth-child(1){inset:-70px;background:radial-gradient(ellipse at 40% 55%,rgba(139,92,246,.5) 0%,rgba(96,165,250,.2) 50%,transparent 70%);z-index:-1}
+.hero-img-glow.hero-img-glow-2{inset:-55px;background:radial-gradient(ellipse at 72% 22%,rgba(6,182,212,.4) 0%,transparent 55%);animation-delay:1.2s;z-index:-1}
+.hero-img-glow.hero-img-glow-3{inset:-50px;background:radial-gradient(ellipse at 18% 78%,rgba(232,72,230,.3) 0%,transparent 55%);animation-delay:2.4s;z-index:-1}
+.hero-img-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.14) 0%,transparent 38%,rgba(139,92,246,.07) 100%);border-radius:30px;pointer-events:none;z-index:2}
+.hero-img-scan{position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,rgba(6,182,212,.0) 10%,rgba(6,182,212,.7) 40%,rgba(192,132,252,.9) 60%,rgba(6,182,212,.7) 70%,rgba(6,182,212,.0) 90%,transparent 100%);filter:blur(2px);animation:heroScanLine 2.8s ease-in-out infinite;pointer-events:none;z-index:3}
+.hero-img-corner{position:absolute;width:28px;height:28px;pointer-events:none;z-index:3;animation:heroCornerPulse 2s ease-in-out infinite}
+.hero-img-corner-tl{top:12px;left:12px;border-top:2.5px solid rgba(6,182,212,.9);border-left:2.5px solid rgba(6,182,212,.9);border-radius:8px 0 0 0}
+.hero-img-corner-br{bottom:12px;right:12px;border-bottom:2.5px solid rgba(192,132,252,.9);border-right:2.5px solid rgba(192,132,252,.9);border-radius:0 0 8px 0;animation-delay:1s}
 
 /* ── HERO MOBILE PHOTO ── */
 .hero-brain-wrap{display:block}
@@ -1488,8 +1565,8 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 /* ── RESPONSIVE DBC CANVAS ── */
 .dbc-outer{position:relative;width:700px;height:525px;flex-shrink:0;transform-origin:top center;margin:0 auto}
 /* Scale formula: based on 700x525 canvas */
-.hero-right{overflow:hidden}
-@media(max-width:1024px){.hero-right{overflow:visible;padding-top:24px}}
+.hero-right{overflow:visible}
+@media(max-width:1024px){.hero-right{padding-top:16px}}
 @media(max-width:1200px){
   .dbc-outer{transform:scale(0.92);transform-origin:top center;margin-bottom:calc(525px*(0.92 - 1))}
 }
@@ -1519,7 +1596,7 @@ footer{border-top:1px solid var(--b1);padding:56px 0 30px;position:relative;z-in
 .logo-main{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1}
 .logo-main em{font-style:normal;color:#00d4ff}
 .logo-sub{font-family:'Space Grotesk',sans-serif;font-size:9px;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;line-height:1;margin-top:3px}
-.mob-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Space Mono',monospace;font-size:14px;font-weight:700;color:var(--text);letter-spacing:1px;margin-bottom:28px}
+.mob-logo{display:flex;align-items:center;gap:14px;text-decoration:none;font-family:'Space Mono',monospace;font-size:20px;font-weight:700;color:var(--text);letter-spacing:1px;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--b1)}
 
 /* ── LANG SWITCHER ── */
 .lang-switcher{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.04);border:1px solid var(--b1);border-radius:8px;padding:3px}
