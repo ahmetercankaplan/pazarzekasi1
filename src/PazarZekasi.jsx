@@ -1263,7 +1263,7 @@ section{position:relative;z-index:2}
 @keyframes heroGlowPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
 @keyframes heroScanLine{0%{top:-4%;opacity:0}5%{opacity:1}92%{opacity:.8}100%{top:104%;opacity:0}}
 @keyframes heroCornerPulse{0%,100%{opacity:.5;box-shadow:0 0 8px rgba(6,182,212,.4)}50%{opacity:1;box-shadow:0 0 18px rgba(6,182,212,.9),0 0 32px rgba(6,182,212,.4)}}
-.hero-img-frame{position:relative;border-radius:32px;width:100%;max-width:780px;transform-style:preserve-3d;will-change:transform;--ty:0px;cursor:crosshair}
+.hero-img-frame{position:relative;border-radius:32px;width:100%;max-width:680px;transform-style:preserve-3d;will-change:transform;--ty:0px;cursor:crosshair}
 .hero-img-main{width:100%;height:auto;display:block;border-radius:30px;box-shadow:0 40px 100px rgba(0,0,0,.65),0 8px 32px rgba(0,0,0,.45)}
 .hero-img-border{position:absolute;inset:-2px;border-radius:32px;background:linear-gradient(135deg,rgba(139,92,246,.9),rgba(6,182,212,.7),rgba(192,132,252,.6),rgba(96,165,250,.8));background-size:300% 300%;animation:heroBorderSpin 3.5s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:2px;pointer-events:none}
 .hero-img-glow{position:absolute;pointer-events:none;filter:blur(40px);animation:heroGlowPulse 3.5s ease-in-out infinite}
